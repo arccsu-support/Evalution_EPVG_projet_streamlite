@@ -28,9 +28,17 @@ from scoring import (
     NIVEAUX_BPSD, DECISION_OPTIONS, classify_bpsd, categorize,
 )
 
+def get_secret(key, default_value=""):
+    try:
+        if key in st.secrets:
+            return st.secrets[key]
+    except Exception:
+        pass
+    return os.getenv(key, default_value)
+
 # Constantes d'authentification
-APP_USER = os.getenv("APP_USER", "admin")
-APP_PASSWORD = os.getenv("APP_PASSWORD", "admin")
+APP_USER = get_secret("APP_USER", "admin")
+APP_PASSWORD = get_secret("APP_PASSWORD", "admin")
 
 # ── Configuration de la page ─────────────────────────────────────────────────
 st.set_page_config(
@@ -263,35 +271,40 @@ if not st.session_state["authenticated"]:
     st.markdown('<div class="login-container">', unsafe_allow_html=True)
     if logo_img:
         st.image(logo_img, width=150)
-    st.markdown("<h2>🔒 Connexion à ODK Central</h2>", unsafe_allow_html=True)
+    st.markdown("<h2>🔒 Accès Sécurisé</h2>", unsafe_allow_html=True)
     
     with st.form("login_form"):
-        server_url = st.text_input("Serveur URL", value=os.getenv("ODK_SERVER_URL", "https://votre-serveur-odk.com"))
-        email = st.text_input("Email ODK", value=os.getenv("ODK_EMAIL", ""))
-        password = st.text_input("Mot de passe ODK", type="password")
-        project_id = st.number_input("Project ID", value=int(os.getenv("ODK_PROJECT_ID", 1)), min_value=1)
-        form_id = st.text_input("Form ID", value=os.getenv("ODK_FORM_ID", "Formulaire_evaluation_epvg_phase2"))
-        
+        app_password = st.text_input("Mot de passe Application", type="password")
         submit_button = st.form_submit_button("Se Connecter", use_container_width=True)
-        
+
         if submit_button:
-            if server_url and email and password and form_id:
-                # Test the connection to ensure it works before saving
-                client_test = ODKClient(server_url, email, password, project_id, form_id)
-                if client_test.authenticate():
-                    st.session_state["authenticated"] = True
-                    # Store these for later use in the sidebar
-                    st.session_state["odk_server_url"] = server_url
-                    st.session_state["odk_email"] = email
-                    st.session_state["odk_password"] = password
-                    st.session_state["odk_project_id"] = project_id
-                    st.session_state["odk_form_id"] = form_id
-                    st.session_state["odk_client"] = client_test  # Enregistrer le client ODK
-                    st.rerun()
-                else:
-                    st.error("❌ Échec de la connexion. Vérifiez vos identifiants.")
+            if app_password == get_secret("APP_ACCESS_PASSWORD"):
+                st.session_state["authenticated"] = True
+                # Récupérer les identifiants ODK (hybride : st.secrets ou .env)
+                server_url = get_secret("ODK_SERVER_URL", "")
+                email = get_secret("ODK_EMAIL", "")
+                odk_password = get_secret("ODK_PASSWORD", "")
+                project_id = int(get_secret("ODK_PROJECT_ID", 1))
+                form_id = get_secret("ODK_FORM_ID", "Formulaire_evaluation_epvg_phase2")
+                # Stocker dans la session pour l'interface de filtrage/barre latérale
+                st.session_state["odk_server_url"] = server_url
+                st.session_state["odk_email"] = email
+                st.session_state["odk_password"] = odk_password
+                st.session_state["odk_project_id"] = project_id
+                st.session_state["odk_form_id"] = form_id
+                # Tester la connexion ODK directement
+                if server_url and email and odk_password:
+                    try:
+                        client_test = ODKClient(server_url, email, odk_password, project_id, form_id)
+                        if client_test.authenticate():
+                            st.session_state["odk_client"] = client_test
+                        else:
+                            st.warning("⚠️ Connecté à l'app, mais la connexion à ODK a échoué. Identifiants rejetés.")
+                    except Exception as e:
+                        st.error("❌ Impossible de joindre le serveur. L'adresse est peut-être incorrecte ou le serveur est hors-ligne.")
+                st.rerun()
             else:
-                st.warning("⚠️ Veuillez remplir tous les champs.")
+                st.error("❌ Mot de passe invalide.")
     st.markdown('</div>', unsafe_allow_html=True)
     st.stop()  # Stoppe l'exécution ici si non authentifié
 
@@ -330,13 +343,16 @@ with st.sidebar:
 
              if server_url and email and password:
                   if "odk_client" not in st.session_state:
-                      auto_client = ODKClient(server_url, email, password, project_id, form_id)
-                      with st.spinner("🔄 Connexion à ODK Central…"):
-                          if auto_client.authenticate():
-                              st.session_state["odk_client"] = auto_client
-                              st.success("✅ Connecté automatiquement")
-                          else:
-                              st.error("❌ Échec de la connexion. Vérifiez vos identifiants.")
+                      try:
+                          auto_client = ODKClient(server_url, email, password, project_id, form_id)
+                          with st.spinner("🔄 Connexion à ODK Central…"):
+                              if auto_client.authenticate():
+                                  st.session_state["odk_client"] = auto_client
+                                  st.success("✅ Connecté automatiquement")
+                              else:
+                                  st.error("❌ Échec de la connexion. Identifiants rejetés.")
+                      except Exception as e:
+                          st.error("❌ Impossible de joindre le serveur. Adresse incorrecte ou serveur hors-ligne.")
                               
              if "odk_client" in st.session_state:
                   odk_client = st.session_state["odk_client"]
