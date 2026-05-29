@@ -1,0 +1,173 @@
+﻿type,name,label,calculation
+calculate,score_organisation_et_gestion,,"(
+  (
+    coalesce(${q_f25ddf6b}, 0) +
+    coalesce(${q_5d65471f}, 0) +
+    coalesce(${q_150b111c}, 0) +
+    coalesce(${q_3aa06a45}, 0) +
+    coalesce(${q_03810344}, 0) +
+    coalesce(${q_996b56b8}, 0)
+  ) * 3
+) + (
+  coalesce(${q_8b7525a2}, 0) * 5
+)"
+calculate,a_score,,${aa1}+${aa3}
+calculate,a_pourcentage,,((${a_score} div 25 *100))
+calculate,a_ponderation,,((${a_pourcentage} *0.15))
+calculate,a_critique,,"if(${aa1}='0', 1, 0) "
+calculate,a_majeur,,"if(${aa3}='0', 1, 0) "
+calculate,a_taux_majeur,,((${a_majeur} div 1 *100))
+calculate,a_taux_critique,,((${a_critique} div 1 *100))
+calculate,b_score,,${b1}+${b2}+${b3}+${b4}+${b5}
+calculate,b_pourcentage,,((${b_score} div 50 *100))
+calculate,b_ponderation,,((${b_pourcentage} *0.15))
+calculate,b_majeur,,"if(${b1}='0', 1, 0) +if(${b2}='0', 1, 0) +if(${b3}='0', 1, 0) +if(${b4}='0', 1, 0) +if(${b5}='0', 1, 0) "
+calculate,b_taux_majeur,,((${b_majeur} div 5 *100))
+calculate,ca_score,,"if(${ca1}='15',15, 0)+if(${ca2}='10',10, 0)+if(${ca3}='10',10, 0)+if(${ca4}='10',10, 0)+if(${ca5}='10',10, 0)"
+calculate,ca_possible,,"if(${ca5}='na', 0, 10)+45"
+calculate,ca_critique,,"if(${ca1}='0', 1, 0) "
+calculate,ca_majeur,,"if(${ca2}='0' or ${ca2}='', 1, 0)+if(${ca3}='0' or ${ca3}='', 1, 0)+if(${ca4}='0' or ${ca4}='', 1, 0)+if(${ca5}='0' or ${ca5}='', 1, 0)"
+calculate,cb_score,,"if(${cb1}='15',15, 0)+if(${cb2}='10',10, 0)+if(${cb3}='10',10, 0)+if(${cb4}='10',10, 0)+if(${cb5}='10',10, 0)"
+calculate,cb_possible,,"if(${cb3}='na', 0, 10)+if(${cb4}='na', 0, 10)+35"
+calculate,cb_critique,,"if(${cb1}='0', 1, 0) "
+calculate,cb_majeur,,"if(${cb2}='0' or ${cb2}='', 1, 0)+if(${cb3}='0' or ${cb3}='', 1, 0)+if(${cb4}='0' or ${cb4}='', 1, 0)+if(${cb5}='0' or ${cb5}='', 1, 0)"
+calculate,cc_score,,"${cc1}+if(${cc2}='10',10, 0)+if(${cc3}='10',10, 0)+if(${cc4}='10',10, 0)"
+calculate,cc_majeur,,"if(${cc1}='0' or ${cc1}='', 1, 0)+if(${cc2}='0' or ${cc2}='', 1, 0)+if(${cc3}='0' or ${cc3}='', 1, 0)+if(${cc4}='0' or ${cc4}='', 1, 0)"
+calculate,cd_score,,${cd1}
+calculate,cd_mineur,,"if(${cd1}='0' or ${cd1}='', 1, 0)"
+calculate,ce_score,,"${ce1}+if(${ce2}='10',10, 0)+if(${ce3}='10',10, 0)"
+calculate,ce_majeur,,"if(${ce1}='0' or ${ce1}='', 1, 0)+if(${ce2}='0' or ${ce2}='', 1, 0)+if(${ce3}='0' or ${ce3}='', 1, 0)"
+calculate,cf_score,,${cf1}+${cf2}+${cf3}
+calculate,cf_majeur,,"if(${cf1}='0', 1, 0) +if(${cf2}='0', 1, 0) +if(${cf3}='0', 1, 0) "
+calculate,cg_score,,"${cg1}+${cg2}+${cg3}+${cg4}+${cg5}+${cg6}+if(${cg7}='10',10, 0)+${cg8}"
+calculate,cg_possible,,"if(${cg7}='na', 0, 10)+55"
+calculate,cg_majeur,,"if(${cg1}='0', 1, 0) + if(${cg3}='0', 1, 0) + if(${cg5}='0', 1, 0) + if(${cg7}='0', 1, 0) + if(${cg8}='0', 1, 0)"
+calculate,cg_mineur,,"if(${cg2}='0', 1, 0) +if(${cg4}='0', 1, 0) +if(${cg6}='0', 1, 0) "
+calculate,ch_score,,${ch1}+${ch2}+${ch3}+${ch4}+${ch5}
+calculate,ch_majeur,,"if(${ch1}='0', 1, 0) +if(${ch2}='0', 1, 0) +if(${ch3}='0', 1, 0) +if(${ch4}='0', 1, 0)+if(${ch5}='0', 1, 0) "
+calculate,c_score,,${ca_score}+${cb_score}+${cc_score}+${cd_score}+${ce_score}+${cf_score}+${cg_score}+${ch_score}
+calculate,c_possible,,${ca_possible}+${cb_possible}+${cg_possible}+155
+calculate,c_pourcentage,,"if(${c_possible} > 0, round((${c_score} div ${c_possible}) * 100, 2), 0)"
+calculate,c_ponderation,,((${c_pourcentage} *0.15))
+calculate,c_critique,,${ca_critique}+${cb_critique}
+calculate,c_majeur,,${ca_majeur}+${cb_majeur}+${cc_majeur}+${ce_majeur}+${cf_majeur}+${cg_majeur}+${ch_majeur}
+calculate,c_mineur ,,${cd_mineur}+${cg_mineur}
+calculate,c_taux_mineur,,((${c_mineur} div 4 *100))
+calculate,c_taux_majeur,,((${c_majeur} div 28 *100))
+calculate,c_taux_critique,,((${c_critique} div 2 *100))
+calculate,da_score,,"${da1}+if(${da2}='1',1, 0)+if(${da3}='15',15, 0)+${da4}+${da5}+${da6}+${da7}+${da8}"
+calculate,da_possible,,"if(${da2}='na', 0, 1)+if(${da3}='na', 0, 15)+61"
+calculate,da_majeur,,"if(${da7}='0', 1, 0) "
+calculate,da_mineur,,"if(${da8}='0', 1, 0) "
+calculate,da_critique,,"if(${da3}='0', 1, 0) +if(${da4}='0', 1, 0) +if(${da5}='0', 1, 0) +if(${da6}='0', 1, 0) "
+calculate,da_remarque,,"if(${da1}='0', 1, 0) +if(${da2}='0', 1, 0)"
+calculate,db_score,,"${db1}+if(${db2}='15',15, 0)+if(${db3}='5',5, 0)+if(${db4}='15',15, 0)"
+calculate,db_possible,,"if(${db2}='na', 0, 15)+if(${db3}='na', 0, 5)+if(${db4}='na', 0, 15)+10"
+calculate,db_majeur,,"if(${db1}='0', 1, 0) "
+calculate,db_mineur,,"if(${db3}='0', 1, 0) "
+calculate,db_critique,,"if(${db2}='0', 1, 0) +if(${db4}='0', 1, 0) "
+calculate,dc_score,,"if(${dc1}='10',10, 0)+if(${dc2}='10',10, 0)+if(${dc3}='10',10, 0)+if(${dc4}='10',10, 0)+${dc5}+if(${dc6}='10',10, 0)+if(${dc7}='15',15, 0)"
+calculate,dc_possible,,"if(${dc1}='na', 0, 10)+if(${dc2}='na', 0,10)+if(${dc3}='na', 0, 10)+if(${dc4}='na', 0, 10)+10+if(${dc6}='na', 0, 10)+if(${dc7}='na', 0, 15)"
+calculate,dc_critique,,"if(${dc7}='0', 1, 0) "
+calculate,dc_majeur,,"if(${dc1}='0', 1, 0) +if(${dc2}='0', 1, 0) +if(${dc3}='0', 1, 0) +if(${dc4}='0', 1, 0) +if(${dc5}='0', 1, 0) +if(${dc6}='0', 1, 0) "
+calculate,de_score,,${de1}+${de2}+${de3}+${de4}+${de5}
+calculate,de_majeur,,"if(${de1}='0', 1, 0) +if(${de3}='0', 1, 0) +if(${de4}='0', 1, 0) "
+calculate,de_mineur,,"if(${de2}='0', 1, 0) "
+calculate,de_remarque,,"if(${de5}='0', 1, 0) "
+calculate,d_score,,${da_score}+${db_score}+${dc_score}+${de_score}
+calculate,d_possible,,${da_possible}+${db_possible}+${dc_possible}+36
+calculate,d_pourcentage,,"if(${d_possible} > 0, round((${d_score} div ${d_possible}) * 100, 2), 0)"
+calculate,d_ponderation,,((${d_pourcentage} *0.07))
+calculate,d_critique,,${da_critique}+${db_critique}+${dc_critique}
+calculate,d_majeur,,${da_majeur}+${db_majeur}+${dc_majeur}+${de_majeur}
+calculate,d_mineur ,,${da_mineur}+${db_mineur}+${de_mineur}
+calculate,d_remarque,,${da_remarque}+${de_remarque}
+calculate,d_taux_remarque,,((${d_remarque} div 3 *100))
+calculate,d_taux_mineur,,((${d_mineur} div 3 *100))
+calculate,d_taux_majeur,,((${d_majeur} div 11 *100))
+calculate,d_taux_critique,,((${d_critique} div 7 *100))
+calculate,ea_score,,"${ea1}+${ea3}+${ea4}+${ea5}+${ea6}+${ea7}+${ea8}+if(${ea10}='10',10, 0)+${ea11}+${ea12}+${ea14}+${ea16}"
+calculate,ea_possible,,"if(${ea10}='na', 0, 10)+105"
+calculate,ea_mineur,,"if(${ea5}='0', 1, 0) "
+calculate,ea_majeur,,"if(${ea1}='0', 1, 0) +if(${ea3}='0', 1, 0) +if(${ea4}='0', 1, 0)+if(${ea6}='0', 1, 0) +if(${ea7}='0', 1, 0) +if(${ea8}='0', 1, 0) +if(${ea10}='0', 1, 0) +if(${ea11}='0', 1, 0) +if(${ea12}='0', 1, 0) +if(${ea14}='0', 1, 0) +if(${ea16}='0', 1, 0) "
+calculate,eb_score,,${eb1}+${eb2}+${eb3}+${eb4}+${eb5}+${eb6}
+calculate,eb_mineur,,"if(${eb2}='0', 1, 0) +if(${eb4}='0', 1, 0)"
+calculate,eb_majeur,,"if(${eb1}='0', 1, 0) +if(${eb3}='0', 1, 0) +if(${eb5}='0', 1, 0)+if(${eb6}='0', 1, 0) "
+calculate,ec_score,,${ec1}+${ec2}+${ec3}+${ec4}+${ec5}+${ec6}+${ec8}+${ec9}+${ec10}+${ec12}+${ec13}+${ec14}+${ec16}+${ec17}+${ec18}+${ec19}+${ec20}+${ec21}+${ec23}
+calculate,ec_mineur,,"if(${ec8}='0', 1, 0) +if(${ec10}='0', 1, 0)+if(${ec23}='0', 1, 0)"
+calculate,ec_majeur,,"if(${ec1}='0', 1, 0) +if(${ec2}='0', 1, 0) +if(${ec3}='0', 1, 0)+if(${ec4}='0', 1, 0) +if(${ec5}='0', 1, 0) +if(${ec6}='0', 1, 0)+if(${ec9}='0', 1, 0) +if(${ec12}='0', 1, 0) +if(${ec13}='0', 1, 0)+if(${ec14}='0', 1, 0) +if(${ec16}='0', 1, 0) +if(${ec17}='0', 1, 0)+if(${ec20}='0', 1, 0) +if(${ec21}='0', 1, 0) "
+calculate,ec_critique,,"if(${ec18}='0', 1, 0) +if(${ec19}='0', 1, 0)"
+calculate,ed_score,,"if(${ed1}='10',10, 0)+if(${ed2}='10',10, 0)+if(${ed3}='10',10, 0)+if(${ed5}='10',10, 0)+if(${ed7}='10',10, 0)"
+calculate,ed_possible,,"if(${ed1}='na', 0, 10)+if(${ed2}!='', 10, 0)+if(${ed3}!='', 10, 0)+if(${ed5}!='', 10, 0)+if(${ed7}!='', 10, 0)"
+calculate,ed_majeur,,"if(${ed1}='0', 1, 0)+if(${ed2}='0', 1, 0)+if(${ed3}='0', 1, 0)+if(${ed5}='0', 1, 0)+if(${ed7}='0', 1, 0)"
+calculate,ef_score,,${ef1}+${ef2}+${ef3}+${ef4}+${ef5}
+calculate,ef_mineur,,"if(${ef2}='0', 1, 0) +if(${ef3}='0', 1, 0)"
+calculate,ef_majeur,,"if(${ef1}='0', 1, 0) +if(${ef4}='0', 1, 0) +if(${ef5}='0', 1, 0)"
+calculate,eg_score,,${eg1}+${eg2}+${eg3}+${eg5}+${eg7}+${eg8}+${eg9}+${eg10}
+calculate,eg_mineur,,"if(${eg2}='0', 1, 0) +if(${eg7}='0', 1, 0)+if(${eg8}='0', 1, 0) +if(${eg9}='0', 1, 0)"
+calculate,eg_majeur,,"if(${eg1}='0', 1, 0) +if(${eg3}='0', 1, 0) +if(${eg5}='0', 1, 0)+if(${eg10}='0', 1, 0)"
+calculate,eh_score,,${eh1}+${eh2}+${eh3}+${eh4}+${eh5}+${eh7}
+calculate,eh_mineur,,"if(${eh5}='0', 1, 0) "
+calculate,eh_majeur,,"if(${eh1}='0', 1, 0) +if(${eh2}='0', 1, 0) +if(${eh3}='0', 1, 0)+if(${eh4}='0', 1, 0)+if(${eh7}='0', 1, 0)"
+calculate,ei_score,,${ei1}+${ei2}+${ei3}+${ei4}+${ei5}+${ei6}+${ei7}+${ei8}
+calculate,ei_majeur,,"if(${ei1}='0', 1, 0) +if(${ei2}='0', 1, 0) +if(${ei3}='0', 1, 0)+if(${ei4}='0', 1, 0)+if(${ei5}='0', 1, 0) +if(${ei6}='0', 1, 0)+if(${ei7}='0', 1, 0)+if(${ei8}='0', 1, 0)"
+calculate,ej_score,,"if(${ej1}='10',10, 0)+${ej2}+${ej3}+${ej4}+${ej5}+${ej6}+${ej7}"
+calculate,ej_possible,,"if(${ej1}='na', 0, 10)+65"
+calculate,ej_critique,,"if(${ej2}='0', 1, 0) "
+calculate,ej_majeur,,"if(${ej1}='0', 1, 0) +if(${ej3}='0', 1, 0) +if(${ej4}='0', 1, 0)+if(${ej5}='0', 1, 0)+if(${ej6}='0', 1, 0)+if(${ej7}='0', 1, 0)"
+calculate,e_score,,${ea_score}+${eb_score}+${ec_score}+${ed_score}+${ef_score}+${eg_score}+${eh_score}+${ei_score}+${ej_score}
+calculate,e_possible,,${ea_possible}+${ed_possible}+545
+calculate,e_pourcentage,,"if(${e_possible} > 0, round((${e_score} div ${e_possible}) * 100, 2), 0)"
+calculate,e_ponderation,,((${e_pourcentage} *0.20))
+calculate,e_critique,,${ec_critique}+${ej_critique}
+calculate,e_majeur,,${ea_majeur}+${eb_majeur}+${ec_majeur}+${ed_majeur}+${ef_majeur}+${eg_majeur}+${eh_majeur}+${ei_majeur}+${ej_majeur}
+calculate,e_mineur ,,${ea_mineur}+${eb_mineur}+${ec_mineur}+${ef_mineur}+${eg_mineur}+${eh_mineur}
+calculate,e_taux_mineur,,((${e_mineur} div 13 *100))
+calculate,e_taux_majeur,,((${e_majeur} div 60 *100))
+calculate,e_taux_critique,,((${e_critique} div 3 *100))
+calculate,f_score,,"${fa1}+${fa2}+if(${fa3}='5',5, 0)+if(${fa4}='5',5, 0)+${fa5}+if(${fa6}='15',15, 0)+if(${fa7}='15',15, 0)"
+calculate,f_possible,,"if(${fa3}='na', 0, 5)+if(${fa4}='na', 0, 5)+if(${fa6}='na', 0, 15)+if(${fa7}='na', 0, 15)+30"
+calculate,f_pourcentage,,"if(${f_possible} > 0, round((${f_score} div ${f_possible}) * 100, 2), 0)"
+calculate,f_ponderation,,((${f_pourcentage} *0.07))
+calculate,f_critique,,"if(${fa6}='0', 1, 0) +if(${fa7}='0', 1, 0) "
+calculate,f_majeur,,"if(${fa1}='0', 1, 0) +if(${fa2}='0', 1, 0) +if(${fa5}='0', 1, 0)"
+calculate,f_mineur ,,"if(${fa3}='0', 1, 0) +if(${fa4}='0', 1, 0) "
+calculate,f_taux_mineur,,((${f_mineur} div 2 *100))
+calculate,f_taux_majeur,,((${f_majeur} div 3 *100))
+calculate,f_taux_critique,,((${f_critique} div 2 *100))
+calculate,ga_score,,"${ga1}+if(${ga2}='10',10, 0)+${ga3}+${ga4}+${ga5}+if(${ga6}='10',10, 0)+if(${ga7}='10',10, 0)"
+calculate,ga_possible,,"10+if(${ga2}='na', 0, 10)+if(${ga3}!='', 10, 0)+if(${ga4}!='', 10, 0)+if(${ga5}!='', 5, 0)+if(${ga6}!='' and ${ga6}!='na', 10, 0)+if(${ga7}!='' and ${ga7}!='na', 10, 0)"
+calculate,ga_majeur,,"if(${ga1}='0', 1, 0)+if(${ga2}='0', 1, 0)+if(${ga3}='0', 1, 0)+if(${ga4}='0', 1, 0)+if(${ga6}='0', 1, 0)+if(${ga7}='0', 1, 0)"
+calculate,ga_mineur,,"if(${ga5}='0', 1, 0)"
+calculate,gb_score,,"${gb1}+if(${gb2}='10',10, 0)+if(${gb3}='10',10, 0)+if(${gb4}='10',10, 0)+if(${gb5}='5',5, 0)"
+calculate,gb_possible,,"10+if(${gb2}='na', 0, 10)+if(${gb3}!='' and ${gb3}!='na', 10, 0)+if(${gb4}!='' and ${gb4}!='na', 10, 0)+if(${gb5}!='' and ${gb5}!='na', 5, 0)"
+calculate,gb_majeur,,"if(${gb1}='0', 1, 0)+if(${gb2}='0', 1, 0)+if(${gb3}='0', 1, 0)+if(${gb4}='0', 1, 0)"
+calculate,gb_mineur,,"if(${gb5}='0', 1, 0)"
+calculate,g_score,,${ga_score}+${gb_score}
+calculate,g_possible,,${ga_possible}+${gb_possible}
+calculate,g_pourcentage,,"if(${g_possible} > 0, round((${g_score} div ${g_possible}) * 100, 2), 0)"
+calculate,g_ponderation,,((${g_pourcentage} *0.07))
+calculate,g_majeur,,${ga_majeur}+${gb_majeur}
+calculate,g_mineur ,,${ga_mineur}+${gb_mineur}
+calculate,g_taux_mineur,,((${g_mineur} div 2 *100))
+calculate,g_taux_majeur,,((${g_majeur} div 10 *100))
+calculate,ha_score,,${ha1}+${ha2}+${ha3}+${ha4}
+calculate,h_pourcentage,,((${ha_score} div 40 *100))
+calculate,h_ponderation,,((${h_pourcentage} *0.07))
+calculate,h_majeur,,"if(${ha1}='0', 1, 0) +if(${ha2}='0', 1, 0) +if(${ha3}='0', 1, 0)+if(${ha4}='0', 1, 0)"
+calculate,h_taux_majeur,,((${h_majeur} div 4 *100))
+calculate,i_score,,"${ia1}+if(${ia2}='10',10, 0)+${ia3}+${ia4}"
+calculate,i_possible,,"if(${ia2}='na', 0, 10)+30"
+calculate,i_pourcentage,,"if(${i_possible} > 0, round((${i_score} div ${i_possible}) * 100, 2), 0)"
+calculate,i_ponderation,,((${i_pourcentage} *0.07))
+calculate,i_majeur,,"if(${ia1}='0', 1, 0) +if(${ia2}='0', 1, 0) +if(${ia3}='0', 1, 0)+if(${ia4}='0', 1, 0)"
+calculate,i_taux_majeur,,((${i_majeur} div 4 *100))
+calculate,total,,${a_ponderation}+${b_ponderation}+${c_ponderation}+${d_ponderation}+${e_ponderation}+${f_ponderation}+${g_ponderation}+${h_ponderation}+${i_ponderation}
+calculate,total_remarque,,${d_remarque}
+calculate,total_mineur,,${g_mineur}+${f_mineur}+${e_mineur}+${d_mineur}+${c_mineur}
+calculate,total_majeur,,${a_majeur}+${b_majeur}+${c_majeur}+${d_majeur}+${e_majeur}+${f_majeur}+${g_majeur}+${h_majeur}+${i_majeur}
+calculate,total_critique,,${a_critique}+${c_critique}+${d_critique}+${e_critique}+${f_critique}
+calculate,total_taux_remarque,,((${total_remarque} div 3 *100))
+calculate,total_taux_mineur,,((${total_mineur} div 24 *100))
+calculate,total_taux_majeur,,((${total_majeur} div 126 *100))
+calculate,total_taux_critique,,((${total_critique} div 15 *100))

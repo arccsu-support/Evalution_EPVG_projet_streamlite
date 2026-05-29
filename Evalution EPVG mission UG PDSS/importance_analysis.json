@@ -1,0 +1,253 @@
+{
+  "total_questions_with_importance": 168,
+  "importance_distribution": {
+    "Majeur": 126,
+    "Mineur": 24,
+    "Critique": 15,
+    "Remarque": 3
+  },
+  "importance_raw_distribution": {
+    "ma": 101,
+    "Ma": 18,
+    "mi": 16,
+    "C": 9,
+    "c": 6,
+    "Mi": 6,
+    "MA": 4,
+    "Ma ": 3,
+    "Re": 3,
+    "MI": 2
+  },
+  "type_counts": {
+    "select_one majeur": 105,
+    "select_one majeur_na": 19,
+    "select_one mineur": 19,
+    "select_one critique": 9,
+    "select_one critique_na": 6,
+    "select_one mineur_na": 3,
+    "select_one mineur ": 2,
+    "select_one majeur ": 2,
+    "select_one remarque": 2,
+    "select_one remarque_na": 1
+  },
+  "list_choices": {
+    "critique": [
+      {
+        "name": "15",
+        "label": "Oui"
+      },
+      {
+        "name": "0",
+        "label": "Non"
+      }
+    ],
+    "majeur": [
+      {
+        "name": "10",
+        "label": "Oui"
+      },
+      {
+        "name": "0",
+        "label": "Non"
+      }
+    ],
+    "majeur_na": [
+      {
+        "name": "10",
+        "label": "Oui"
+      },
+      {
+        "name": "0",
+        "label": "Non"
+      },
+      {
+        "name": "na ",
+        "label": "Non_Applicable"
+      }
+    ],
+    "mineur": [
+      {
+        "name": "5",
+        "label": "Oui"
+      },
+      {
+        "name": "0",
+        "label": "Non"
+      }
+    ],
+    "remarque": [
+      {
+        "name": "1",
+        "label": "Oui"
+      },
+      {
+        "name": "0",
+        "label": "Non"
+      }
+    ],
+    "remarque_na": [
+      {
+        "name": "1",
+        "label": "Oui"
+      },
+      {
+        "name": "0",
+        "label": "Non"
+      },
+      {
+        "name": "na",
+        "label": "Non_Applicable"
+      }
+    ],
+    "critique_na": [
+      {
+        "name": "15",
+        "label": "Oui"
+      },
+      {
+        "name": "0",
+        "label": "Non"
+      },
+      {
+        "name": "na ",
+        "label": "Non_Applicable"
+      }
+    ],
+    "mineur_na": [
+      {
+        "name": "5",
+        "label": "Oui"
+      },
+      {
+        "name": "0",
+        "label": "Non"
+      },
+      {
+        "name": "na",
+        "label": "Non_Applicable"
+      }
+    ]
+  },
+  "sample_questions_with_importance": [
+    {
+      "name": "aa1",
+      "label": "L'établisssment est-il autorisé?",
+      "importance": "c",
+      "type": "select_one critique"
+    },
+    {
+      "name": "aa3",
+      "label": "L'établissment est -il certifié par l'ACOREP/autre Organisme?",
+      "importance": "Ma",
+      "type": "select_one majeur"
+    },
+    {
+      "name": "b1",
+      "label": "Existe-il un manuel qualité signé par le responsable?",
+      "importance": "ma",
+      "type": "select_one majeur"
+    },
+    {
+      "name": "b2",
+      "label": "La politique Qualité est-elle declarée dans le manuel qualité décrivant les intentions et les exigences générales en matière de qualité.?",
+      "importance": "ma",
+      "type": "select_one majeur"
+    },
+    {
+      "name": "b3",
+      "label": "Liste des procédures est-elle disponible?",
+      "importance": "ma",
+      "type": "select_one majeur"
+    },
+    {
+      "name": "b4",
+      "label": " Existe til la procédure des procedures",
+      "importance": "ma",
+      "type": "select_one majeur"
+    },
+    {
+      "name": "b5",
+      "label": " les procédures sont elles signées? (3 signatures Operationnel, RAQ et le Responsable )",
+      "importance": "ma",
+      "type": "select_one majeur"
+    },
+    {
+      "name": "ca1",
+      "label": "Disposez-vous d’un pharmacien Responsable ?",
+      "importance": "c",
+      "type": "select_one critique"
+    },
+    {
+      "name": "ca2",
+      "label": "Est-il titulaire d’un diplôme ou Tenant Lieu  ?",
+      "importance": "ma",
+      "type": "select_one majeur"
+    },
+    {
+      "name": "ca3",
+      "label": "Possede-t-il un Certificat d’exercer ?",
+      "importance": "ma",
+      "type": "select_one majeur"
+    },
+    {
+      "name": "ca4",
+      "label": "Est-il inscrit au tableau de l'Ordre?",
+      "importance": "ma",
+      "type": "select_one majeur"
+    },
+    {
+      "name": "ca5",
+      "label": "Dispose-t-il d’un contrat de travail légalisé ?",
+      "importance": "ma",
+      "type": "select_one majeur_na"
+    },
+    {
+      "name": "cb1",
+      "label": "Disposez-vous d’un personnel qualifié chargé de l’assurance qualité ?",
+      "importance": "c",
+      "type": "select_one critique"
+    },
+    {
+      "name": "cb2",
+      "label": "Est-il titulaire d’un diplôme ou Tenant Lieu  ?",
+      "importance": "ma",
+      "type": "select_one majeur"
+    },
+    {
+      "name": "cb3",
+      "label": "Est-il inscrit au tableau de l'Ordre?",
+      "importance": "ma",
+      "type": "select_one majeur_na"
+    },
+    {
+      "name": "cb4",
+      "label": "Possede-t-il un Certificat d’exercer ?",
+      "importance": "ma",
+      "type": "select_one majeur_na"
+    },
+    {
+      "name": "cb5",
+      "label": "Dispose-t-il d’un contrat de travail légalisé ?",
+      "importance": "ma",
+      "type": "select_one majeur"
+    },
+    {
+      "name": "cc1",
+      "label": "Disposez-vous d’un ou de plusieurs assistants/techniciens en pharmacie ??",
+      "importance": "ma",
+      "type": "select_one majeur"
+    },
+    {
+      "name": "cc2",
+      "label": "Est-il / sont-ils titulaires du ou des diplôme(s) requis ?",
+      "importance": "ma",
+      "type": "select_one majeur"
+    },
+    {
+      "name": "cc3",
+      "label": "Dispose-t-il / disposent-ils de la ou des carte(s) verte(s) ?",
+      "importance": "ma",
+      "type": "select_one majeur"
+    }
+  ]
+}

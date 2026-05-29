@@ -1,0 +1,807 @@
+[
+  {
+    "name": "score_organisation_et_gestion",
+    "calculation": "(\n  (\n    coalesce(${q_f25ddf6b}, 0) +\n    coalesce(${q_5d65471f}, 0) +\n    coalesce(${q_150b111c}, 0) +\n    coalesce(${q_3aa06a45}, 0) +\n    coalesce(${q_03810344}, 0) +\n    coalesce(${q_996b56b8}, 0)\n  ) * 3\n) + (\n  coalesce(${q_8b7525a2}, 0) * 5\n)",
+    "label": NaN
+  },
+  {
+    "name": "a_score",
+    "calculation": "${aa1}+${aa3}",
+    "label": NaN
+  },
+  {
+    "name": "a_pourcentage",
+    "calculation": "((${a_score} div 25 *100))",
+    "label": NaN
+  },
+  {
+    "name": "a_ponderation",
+    "calculation": "((${a_pourcentage} *0.15))",
+    "label": NaN
+  },
+  {
+    "name": "a_critique",
+    "calculation": "if(${aa1}='0', 1, 0) ",
+    "label": NaN
+  },
+  {
+    "name": "a_majeur",
+    "calculation": "if(${aa3}='0', 1, 0) ",
+    "label": NaN
+  },
+  {
+    "name": "a_taux_majeur",
+    "calculation": "((${a_majeur} div 1 *100))",
+    "label": NaN
+  },
+  {
+    "name": "a_taux_critique",
+    "calculation": "((${a_critique} div 1 *100))",
+    "label": NaN
+  },
+  {
+    "name": "b_score",
+    "calculation": "${b1}+${b2}+${b3}+${b4}+${b5}",
+    "label": NaN
+  },
+  {
+    "name": "b_pourcentage",
+    "calculation": "((${b_score} div 50 *100))",
+    "label": NaN
+  },
+  {
+    "name": "b_ponderation",
+    "calculation": "((${b_pourcentage} *0.15))",
+    "label": NaN
+  },
+  {
+    "name": "b_majeur",
+    "calculation": "if(${b1}='0', 1, 0) +if(${b2}='0', 1, 0) +if(${b3}='0', 1, 0) +if(${b4}='0', 1, 0) +if(${b5}='0', 1, 0) ",
+    "label": NaN
+  },
+  {
+    "name": "b_taux_majeur",
+    "calculation": "((${b_majeur} div 5 *100))",
+    "label": NaN
+  },
+  {
+    "name": "ca_score",
+    "calculation": "if(${ca1}='15',15, 0)+if(${ca2}='10',10, 0)+if(${ca3}='10',10, 0)+if(${ca4}='10',10, 0)+if(${ca5}='10',10, 0)",
+    "label": NaN
+  },
+  {
+    "name": "ca_possible",
+    "calculation": "if(${ca5}='na', 0, 10)+45",
+    "label": NaN
+  },
+  {
+    "name": "ca_critique",
+    "calculation": "if(${ca1}='0', 1, 0) ",
+    "label": NaN
+  },
+  {
+    "name": "ca_majeur",
+    "calculation": "if(${ca2}='0' or ${ca2}='', 1, 0)+if(${ca3}='0' or ${ca3}='', 1, 0)+if(${ca4}='0' or ${ca4}='', 1, 0)+if(${ca5}='0' or ${ca5}='', 1, 0)",
+    "label": NaN
+  },
+  {
+    "name": "cb_score",
+    "calculation": "if(${cb1}='15',15, 0)+if(${cb2}='10',10, 0)+if(${cb3}='10',10, 0)+if(${cb4}='10',10, 0)+if(${cb5}='10',10, 0)",
+    "label": NaN
+  },
+  {
+    "name": "cb_possible",
+    "calculation": "if(${cb3}='na', 0, 10)+if(${cb4}='na', 0, 10)+35",
+    "label": NaN
+  },
+  {
+    "name": "cb_critique",
+    "calculation": "if(${cb1}='0', 1, 0) ",
+    "label": NaN
+  },
+  {
+    "name": "cb_majeur",
+    "calculation": "if(${cb2}='0' or ${cb2}='', 1, 0)+if(${cb3}='0' or ${cb3}='', 1, 0)+if(${cb4}='0' or ${cb4}='', 1, 0)+if(${cb5}='0' or ${cb5}='', 1, 0)",
+    "label": NaN
+  },
+  {
+    "name": "cc_score",
+    "calculation": "${cc1}+if(${cc2}='10',10, 0)+if(${cc3}='10',10, 0)+if(${cc4}='10',10, 0)",
+    "label": NaN
+  },
+  {
+    "name": "cc_majeur",
+    "calculation": "if(${cc1}='0' or ${cc1}='', 1, 0)+if(${cc2}='0' or ${cc2}='', 1, 0)+if(${cc3}='0' or ${cc3}='', 1, 0)+if(${cc4}='0' or ${cc4}='', 1, 0)",
+    "label": NaN
+  },
+  {
+    "name": "cd_score",
+    "calculation": "${cd1}",
+    "label": NaN
+  },
+  {
+    "name": "cd_mineur",
+    "calculation": "if(${cd1}='0' or ${cd1}='', 1, 0)",
+    "label": NaN
+  },
+  {
+    "name": "ce_score",
+    "calculation": "${ce1}+if(${ce2}='10',10, 0)+if(${ce3}='10',10, 0)",
+    "label": NaN
+  },
+  {
+    "name": "ce_majeur",
+    "calculation": "if(${ce1}='0' or ${ce1}='', 1, 0)+if(${ce2}='0' or ${ce2}='', 1, 0)+if(${ce3}='0' or ${ce3}='', 1, 0)",
+    "label": NaN
+  },
+  {
+    "name": "cf_score",
+    "calculation": "${cf1}+${cf2}+${cf3}",
+    "label": NaN
+  },
+  {
+    "name": "cf_majeur",
+    "calculation": "if(${cf1}='0', 1, 0) +if(${cf2}='0', 1, 0) +if(${cf3}='0', 1, 0) ",
+    "label": NaN
+  },
+  {
+    "name": "cg_score",
+    "calculation": "${cg1}+${cg2}+${cg3}+${cg4}+${cg5}+${cg6}+if(${cg7}='10',10, 0)+${cg8}",
+    "label": NaN
+  },
+  {
+    "name": "cg_possible",
+    "calculation": "if(${cg7}='na', 0, 10)+55",
+    "label": NaN
+  },
+  {
+    "name": "cg_majeur",
+    "calculation": "if(${cg1}='0', 1, 0) + if(${cg3}='0', 1, 0) + if(${cg5}='0', 1, 0) + if(${cg7}='0', 1, 0) + if(${cg8}='0', 1, 0)",
+    "label": NaN
+  },
+  {
+    "name": "cg_mineur",
+    "calculation": "if(${cg2}='0', 1, 0) +if(${cg4}='0', 1, 0) +if(${cg6}='0', 1, 0) ",
+    "label": NaN
+  },
+  {
+    "name": "ch_score",
+    "calculation": "${ch1}+${ch2}+${ch3}+${ch4}+${ch5}",
+    "label": NaN
+  },
+  {
+    "name": "ch_majeur",
+    "calculation": "if(${ch1}='0', 1, 0) +if(${ch2}='0', 1, 0) +if(${ch3}='0', 1, 0) +if(${ch4}='0', 1, 0)+if(${ch5}='0', 1, 0) ",
+    "label": NaN
+  },
+  {
+    "name": "c_score",
+    "calculation": "${ca_score}+${cb_score}+${cc_score}+${cd_score}+${ce_score}+${cf_score}+${cg_score}+${ch_score}",
+    "label": NaN
+  },
+  {
+    "name": "c_possible",
+    "calculation": "${ca_possible}+${cb_possible}+${cg_possible}+155",
+    "label": NaN
+  },
+  {
+    "name": "c_pourcentage",
+    "calculation": "if(${c_possible} > 0, round((${c_score} div ${c_possible}) * 100, 2), 0)",
+    "label": NaN
+  },
+  {
+    "name": "c_ponderation",
+    "calculation": "((${c_pourcentage} *0.15))",
+    "label": NaN
+  },
+  {
+    "name": "c_critique",
+    "calculation": "${ca_critique}+${cb_critique}",
+    "label": NaN
+  },
+  {
+    "name": "c_majeur",
+    "calculation": "${ca_majeur}+${cb_majeur}+${cc_majeur}+${ce_majeur}+${cf_majeur}+${cg_majeur}+${ch_majeur}",
+    "label": NaN
+  },
+  {
+    "name": "c_mineur ",
+    "calculation": "${cd_mineur}+${cg_mineur}",
+    "label": NaN
+  },
+  {
+    "name": "c_taux_mineur",
+    "calculation": "((${c_mineur} div 4 *100))",
+    "label": NaN
+  },
+  {
+    "name": "c_taux_majeur",
+    "calculation": "((${c_majeur} div 28 *100))",
+    "label": NaN
+  },
+  {
+    "name": "c_taux_critique",
+    "calculation": "((${c_critique} div 2 *100))",
+    "label": NaN
+  },
+  {
+    "name": "da_score",
+    "calculation": "${da1}+if(${da2}='1',1, 0)+if(${da3}='15',15, 0)+${da4}+${da5}+${da6}+${da7}+${da8}",
+    "label": NaN
+  },
+  {
+    "name": "da_possible",
+    "calculation": "if(${da2}='na', 0, 1)+if(${da3}='na', 0, 15)+61",
+    "label": NaN
+  },
+  {
+    "name": "da_majeur",
+    "calculation": "if(${da7}='0', 1, 0) ",
+    "label": NaN
+  },
+  {
+    "name": "da_mineur",
+    "calculation": "if(${da8}='0', 1, 0) ",
+    "label": NaN
+  },
+  {
+    "name": "da_critique",
+    "calculation": "if(${da3}='0', 1, 0) +if(${da4}='0', 1, 0) +if(${da5}='0', 1, 0) +if(${da6}='0', 1, 0) ",
+    "label": NaN
+  },
+  {
+    "name": "da_remarque",
+    "calculation": "if(${da1}='0', 1, 0) +if(${da2}='0', 1, 0)",
+    "label": NaN
+  },
+  {
+    "name": "db_score",
+    "calculation": "${db1}+if(${db2}='15',15, 0)+if(${db3}='5',5, 0)+if(${db4}='15',15, 0)",
+    "label": NaN
+  },
+  {
+    "name": "db_possible",
+    "calculation": "if(${db2}='na', 0, 15)+if(${db3}='na', 0, 5)+if(${db4}='na', 0, 15)+10",
+    "label": NaN
+  },
+  {
+    "name": "db_majeur",
+    "calculation": "if(${db1}='0', 1, 0) ",
+    "label": NaN
+  },
+  {
+    "name": "db_mineur",
+    "calculation": "if(${db3}='0', 1, 0) ",
+    "label": NaN
+  },
+  {
+    "name": "db_critique",
+    "calculation": "if(${db2}='0', 1, 0) +if(${db4}='0', 1, 0) ",
+    "label": NaN
+  },
+  {
+    "name": "dc_score",
+    "calculation": "if(${dc1}='10',10, 0)+if(${dc2}='10',10, 0)+if(${dc3}='10',10, 0)+if(${dc4}='10',10, 0)+${dc5}+if(${dc6}='10',10, 0)+if(${dc7}='15',15, 0)",
+    "label": NaN
+  },
+  {
+    "name": "dc_possible",
+    "calculation": "if(${dc1}='na', 0, 10)+if(${dc2}='na', 0,10)+if(${dc3}='na', 0, 10)+if(${dc4}='na', 0, 10)+10+if(${dc6}='na', 0, 10)+if(${dc7}='na', 0, 15)",
+    "label": NaN
+  },
+  {
+    "name": "dc_critique",
+    "calculation": "if(${dc7}='0', 1, 0) ",
+    "label": NaN
+  },
+  {
+    "name": "dc_majeur",
+    "calculation": "if(${dc1}='0', 1, 0) +if(${dc2}='0', 1, 0) +if(${dc3}='0', 1, 0) +if(${dc4}='0', 1, 0) +if(${dc5}='0', 1, 0) +if(${dc6}='0', 1, 0) ",
+    "label": NaN
+  },
+  {
+    "name": "de_score",
+    "calculation": "${de1}+${de2}+${de3}+${de4}+${de5}",
+    "label": NaN
+  },
+  {
+    "name": "de_majeur",
+    "calculation": "if(${de1}='0', 1, 0) +if(${de3}='0', 1, 0) +if(${de4}='0', 1, 0) ",
+    "label": NaN
+  },
+  {
+    "name": "de_mineur",
+    "calculation": "if(${de2}='0', 1, 0) ",
+    "label": NaN
+  },
+  {
+    "name": "de_remarque",
+    "calculation": "if(${de5}='0', 1, 0) ",
+    "label": NaN
+  },
+  {
+    "name": "d_score",
+    "calculation": "${da_score}+${db_score}+${dc_score}+${de_score}",
+    "label": NaN
+  },
+  {
+    "name": "d_possible",
+    "calculation": "${da_possible}+${db_possible}+${dc_possible}+36",
+    "label": NaN
+  },
+  {
+    "name": "d_pourcentage",
+    "calculation": "if(${d_possible} > 0, round((${d_score} div ${d_possible}) * 100, 2), 0)",
+    "label": NaN
+  },
+  {
+    "name": "d_ponderation",
+    "calculation": "((${d_pourcentage} *0.07))",
+    "label": NaN
+  },
+  {
+    "name": "d_critique",
+    "calculation": "${da_critique}+${db_critique}+${dc_critique}",
+    "label": NaN
+  },
+  {
+    "name": "d_majeur",
+    "calculation": "${da_majeur}+${db_majeur}+${dc_majeur}+${de_majeur}",
+    "label": NaN
+  },
+  {
+    "name": "d_mineur ",
+    "calculation": "${da_mineur}+${db_mineur}+${de_mineur}",
+    "label": NaN
+  },
+  {
+    "name": "d_remarque",
+    "calculation": "${da_remarque}+${de_remarque}",
+    "label": NaN
+  },
+  {
+    "name": "d_taux_remarque",
+    "calculation": "((${d_remarque} div 3 *100))",
+    "label": NaN
+  },
+  {
+    "name": "d_taux_mineur",
+    "calculation": "((${d_mineur} div 3 *100))",
+    "label": NaN
+  },
+  {
+    "name": "d_taux_majeur",
+    "calculation": "((${d_majeur} div 11 *100))",
+    "label": NaN
+  },
+  {
+    "name": "d_taux_critique",
+    "calculation": "((${d_critique} div 7 *100))",
+    "label": NaN
+  },
+  {
+    "name": "ea_score",
+    "calculation": "${ea1}+${ea3}+${ea4}+${ea5}+${ea6}+${ea7}+${ea8}+if(${ea10}='10',10, 0)+${ea11}+${ea12}+${ea14}+${ea16}",
+    "label": NaN
+  },
+  {
+    "name": "ea_possible",
+    "calculation": "if(${ea10}='na', 0, 10)+105",
+    "label": NaN
+  },
+  {
+    "name": "ea_mineur",
+    "calculation": "if(${ea5}='0', 1, 0) ",
+    "label": NaN
+  },
+  {
+    "name": "ea_majeur",
+    "calculation": "if(${ea1}='0', 1, 0) +if(${ea3}='0', 1, 0) +if(${ea4}='0', 1, 0)+if(${ea6}='0', 1, 0) +if(${ea7}='0', 1, 0) +if(${ea8}='0', 1, 0) +if(${ea10}='0', 1, 0) +if(${ea11}='0', 1, 0) +if(${ea12}='0', 1, 0) +if(${ea14}='0', 1, 0) +if(${ea16}='0', 1, 0) ",
+    "label": NaN
+  },
+  {
+    "name": "eb_score",
+    "calculation": "${eb1}+${eb2}+${eb3}+${eb4}+${eb5}+${eb6}",
+    "label": NaN
+  },
+  {
+    "name": "eb_mineur",
+    "calculation": "if(${eb2}='0', 1, 0) +if(${eb4}='0', 1, 0)",
+    "label": NaN
+  },
+  {
+    "name": "eb_majeur",
+    "calculation": "if(${eb1}='0', 1, 0) +if(${eb3}='0', 1, 0) +if(${eb5}='0', 1, 0)+if(${eb6}='0', 1, 0) ",
+    "label": NaN
+  },
+  {
+    "name": "ec_score",
+    "calculation": "${ec1}+${ec2}+${ec3}+${ec4}+${ec5}+${ec6}+${ec8}+${ec9}+${ec10}+${ec12}+${ec13}+${ec14}+${ec16}+${ec17}+${ec18}+${ec19}+${ec20}+${ec21}+${ec23}",
+    "label": NaN
+  },
+  {
+    "name": "ec_mineur",
+    "calculation": "if(${ec8}='0', 1, 0) +if(${ec10}='0', 1, 0)+if(${ec23}='0', 1, 0)",
+    "label": NaN
+  },
+  {
+    "name": "ec_majeur",
+    "calculation": "if(${ec1}='0', 1, 0) +if(${ec2}='0', 1, 0) +if(${ec3}='0', 1, 0)+if(${ec4}='0', 1, 0) +if(${ec5}='0', 1, 0) +if(${ec6}='0', 1, 0)+if(${ec9}='0', 1, 0) +if(${ec12}='0', 1, 0) +if(${ec13}='0', 1, 0)+if(${ec14}='0', 1, 0) +if(${ec16}='0', 1, 0) +if(${ec17}='0', 1, 0)+if(${ec20}='0', 1, 0) +if(${ec21}='0', 1, 0) ",
+    "label": NaN
+  },
+  {
+    "name": "ec_critique",
+    "calculation": "if(${ec18}='0', 1, 0) +if(${ec19}='0', 1, 0)",
+    "label": NaN
+  },
+  {
+    "name": "ed_score",
+    "calculation": "if(${ed1}='10',10, 0)+if(${ed2}='10',10, 0)+if(${ed3}='10',10, 0)+if(${ed5}='10',10, 0)+if(${ed7}='10',10, 0)",
+    "label": NaN
+  },
+  {
+    "name": "ed_possible",
+    "calculation": "if(${ed1}='na', 0, 10)+if(${ed2}!='', 10, 0)+if(${ed3}!='', 10, 0)+if(${ed5}!='', 10, 0)+if(${ed7}!='', 10, 0)",
+    "label": NaN
+  },
+  {
+    "name": "ed_majeur",
+    "calculation": "if(${ed1}='0', 1, 0)+if(${ed2}='0', 1, 0)+if(${ed3}='0', 1, 0)+if(${ed5}='0', 1, 0)+if(${ed7}='0', 1, 0)",
+    "label": NaN
+  },
+  {
+    "name": "ef_score",
+    "calculation": "${ef1}+${ef2}+${ef3}+${ef4}+${ef5}",
+    "label": NaN
+  },
+  {
+    "name": "ef_mineur",
+    "calculation": "if(${ef2}='0', 1, 0) +if(${ef3}='0', 1, 0)",
+    "label": NaN
+  },
+  {
+    "name": "ef_majeur",
+    "calculation": "if(${ef1}='0', 1, 0) +if(${ef4}='0', 1, 0) +if(${ef5}='0', 1, 0)",
+    "label": NaN
+  },
+  {
+    "name": "eg_score",
+    "calculation": "${eg1}+${eg2}+${eg3}+${eg5}+${eg7}+${eg8}+${eg9}+${eg10}",
+    "label": NaN
+  },
+  {
+    "name": "eg_mineur",
+    "calculation": "if(${eg2}='0', 1, 0) +if(${eg7}='0', 1, 0)+if(${eg8}='0', 1, 0) +if(${eg9}='0', 1, 0)",
+    "label": NaN
+  },
+  {
+    "name": "eg_majeur",
+    "calculation": "if(${eg1}='0', 1, 0) +if(${eg3}='0', 1, 0) +if(${eg5}='0', 1, 0)+if(${eg10}='0', 1, 0)",
+    "label": NaN
+  },
+  {
+    "name": "eh_score",
+    "calculation": "${eh1}+${eh2}+${eh3}+${eh4}+${eh5}+${eh7}",
+    "label": NaN
+  },
+  {
+    "name": "eh_mineur",
+    "calculation": "if(${eh5}='0', 1, 0) ",
+    "label": NaN
+  },
+  {
+    "name": "eh_majeur",
+    "calculation": "if(${eh1}='0', 1, 0) +if(${eh2}='0', 1, 0) +if(${eh3}='0', 1, 0)+if(${eh4}='0', 1, 0)+if(${eh7}='0', 1, 0)",
+    "label": NaN
+  },
+  {
+    "name": "ei_score",
+    "calculation": "${ei1}+${ei2}+${ei3}+${ei4}+${ei5}+${ei6}+${ei7}+${ei8}",
+    "label": NaN
+  },
+  {
+    "name": "ei_majeur",
+    "calculation": "if(${ei1}='0', 1, 0) +if(${ei2}='0', 1, 0) +if(${ei3}='0', 1, 0)+if(${ei4}='0', 1, 0)+if(${ei5}='0', 1, 0) +if(${ei6}='0', 1, 0)+if(${ei7}='0', 1, 0)+if(${ei8}='0', 1, 0)",
+    "label": NaN
+  },
+  {
+    "name": "ej_score",
+    "calculation": "if(${ej1}='10',10, 0)+${ej2}+${ej3}+${ej4}+${ej5}+${ej6}+${ej7}",
+    "label": NaN
+  },
+  {
+    "name": "ej_possible",
+    "calculation": "if(${ej1}='na', 0, 10)+65",
+    "label": NaN
+  },
+  {
+    "name": "ej_critique",
+    "calculation": "if(${ej2}='0', 1, 0) ",
+    "label": NaN
+  },
+  {
+    "name": "ej_majeur",
+    "calculation": "if(${ej1}='0', 1, 0) +if(${ej3}='0', 1, 0) +if(${ej4}='0', 1, 0)+if(${ej5}='0', 1, 0)+if(${ej6}='0', 1, 0)+if(${ej7}='0', 1, 0)",
+    "label": NaN
+  },
+  {
+    "name": "e_score",
+    "calculation": "${ea_score}+${eb_score}+${ec_score}+${ed_score}+${ef_score}+${eg_score}+${eh_score}+${ei_score}+${ej_score}",
+    "label": NaN
+  },
+  {
+    "name": "e_possible",
+    "calculation": "${ea_possible}+${ed_possible}+545",
+    "label": NaN
+  },
+  {
+    "name": "e_pourcentage",
+    "calculation": "if(${e_possible} > 0, round((${e_score} div ${e_possible}) * 100, 2), 0)",
+    "label": NaN
+  },
+  {
+    "name": "e_ponderation",
+    "calculation": "((${e_pourcentage} *0.20))",
+    "label": NaN
+  },
+  {
+    "name": "e_critique",
+    "calculation": "${ec_critique}+${ej_critique}",
+    "label": NaN
+  },
+  {
+    "name": "e_majeur",
+    "calculation": "${ea_majeur}+${eb_majeur}+${ec_majeur}+${ed_majeur}+${ef_majeur}+${eg_majeur}+${eh_majeur}+${ei_majeur}+${ej_majeur}",
+    "label": NaN
+  },
+  {
+    "name": "e_mineur ",
+    "calculation": "${ea_mineur}+${eb_mineur}+${ec_mineur}+${ef_mineur}+${eg_mineur}+${eh_mineur}",
+    "label": NaN
+  },
+  {
+    "name": "e_taux_mineur",
+    "calculation": "((${e_mineur} div 13 *100))",
+    "label": NaN
+  },
+  {
+    "name": "e_taux_majeur",
+    "calculation": "((${e_majeur} div 60 *100))",
+    "label": NaN
+  },
+  {
+    "name": "e_taux_critique",
+    "calculation": "((${e_critique} div 3 *100))",
+    "label": NaN
+  },
+  {
+    "name": "f_score",
+    "calculation": "${fa1}+${fa2}+if(${fa3}='5',5, 0)+if(${fa4}='5',5, 0)+${fa5}+if(${fa6}='15',15, 0)+if(${fa7}='15',15, 0)",
+    "label": NaN
+  },
+  {
+    "name": "f_possible",
+    "calculation": "if(${fa3}='na', 0, 5)+if(${fa4}='na', 0, 5)+if(${fa6}='na', 0, 15)+if(${fa7}='na', 0, 15)+30",
+    "label": NaN
+  },
+  {
+    "name": "f_pourcentage",
+    "calculation": "if(${f_possible} > 0, round((${f_score} div ${f_possible}) * 100, 2), 0)",
+    "label": NaN
+  },
+  {
+    "name": "f_ponderation",
+    "calculation": "((${f_pourcentage} *0.07))",
+    "label": NaN
+  },
+  {
+    "name": "f_critique",
+    "calculation": "if(${fa6}='0', 1, 0) +if(${fa7}='0', 1, 0) ",
+    "label": NaN
+  },
+  {
+    "name": "f_majeur",
+    "calculation": "if(${fa1}='0', 1, 0) +if(${fa2}='0', 1, 0) +if(${fa5}='0', 1, 0)",
+    "label": NaN
+  },
+  {
+    "name": "f_mineur ",
+    "calculation": "if(${fa3}='0', 1, 0) +if(${fa4}='0', 1, 0) ",
+    "label": NaN
+  },
+  {
+    "name": "f_taux_mineur",
+    "calculation": "((${f_mineur} div 2 *100))",
+    "label": NaN
+  },
+  {
+    "name": "f_taux_majeur",
+    "calculation": "((${f_majeur} div 3 *100))",
+    "label": NaN
+  },
+  {
+    "name": "f_taux_critique",
+    "calculation": "((${f_critique} div 2 *100))",
+    "label": NaN
+  },
+  {
+    "name": "ga_score",
+    "calculation": "${ga1}+if(${ga2}='10',10, 0)+${ga3}+${ga4}+${ga5}+if(${ga6}='10',10, 0)+if(${ga7}='10',10, 0)",
+    "label": NaN
+  },
+  {
+    "name": "ga_possible",
+    "calculation": "10+if(${ga2}='na', 0, 10)+if(${ga3}!='', 10, 0)+if(${ga4}!='', 10, 0)+if(${ga5}!='', 5, 0)+if(${ga6}!='' and ${ga6}!='na', 10, 0)+if(${ga7}!='' and ${ga7}!='na', 10, 0)",
+    "label": NaN
+  },
+  {
+    "name": "ga_majeur",
+    "calculation": "if(${ga1}='0', 1, 0)+if(${ga2}='0', 1, 0)+if(${ga3}='0', 1, 0)+if(${ga4}='0', 1, 0)+if(${ga6}='0', 1, 0)+if(${ga7}='0', 1, 0)",
+    "label": NaN
+  },
+  {
+    "name": "ga_mineur",
+    "calculation": "if(${ga5}='0', 1, 0)",
+    "label": NaN
+  },
+  {
+    "name": "gb_score",
+    "calculation": "${gb1}+if(${gb2}='10',10, 0)+if(${gb3}='10',10, 0)+if(${gb4}='10',10, 0)+if(${gb5}='5',5, 0)",
+    "label": NaN
+  },
+  {
+    "name": "gb_possible",
+    "calculation": "10+if(${gb2}='na', 0, 10)+if(${gb3}!='' and ${gb3}!='na', 10, 0)+if(${gb4}!='' and ${gb4}!='na', 10, 0)+if(${gb5}!='' and ${gb5}!='na', 5, 0)",
+    "label": NaN
+  },
+  {
+    "name": "gb_majeur",
+    "calculation": "if(${gb1}='0', 1, 0)+if(${gb2}='0', 1, 0)+if(${gb3}='0', 1, 0)+if(${gb4}='0', 1, 0)",
+    "label": NaN
+  },
+  {
+    "name": "gb_mineur",
+    "calculation": "if(${gb5}='0', 1, 0)",
+    "label": NaN
+  },
+  {
+    "name": "g_score",
+    "calculation": "${ga_score}+${gb_score}",
+    "label": NaN
+  },
+  {
+    "name": "g_possible",
+    "calculation": "${ga_possible}+${gb_possible}",
+    "label": NaN
+  },
+  {
+    "name": "g_pourcentage",
+    "calculation": "if(${g_possible} > 0, round((${g_score} div ${g_possible}) * 100, 2), 0)",
+    "label": NaN
+  },
+  {
+    "name": "g_ponderation",
+    "calculation": "((${g_pourcentage} *0.07))",
+    "label": NaN
+  },
+  {
+    "name": "g_majeur",
+    "calculation": "${ga_majeur}+${gb_majeur}",
+    "label": NaN
+  },
+  {
+    "name": "g_mineur ",
+    "calculation": "${ga_mineur}+${gb_mineur}",
+    "label": NaN
+  },
+  {
+    "name": "g_taux_mineur",
+    "calculation": "((${g_mineur} div 2 *100))",
+    "label": NaN
+  },
+  {
+    "name": "g_taux_majeur",
+    "calculation": "((${g_majeur} div 10 *100))",
+    "label": NaN
+  },
+  {
+    "name": "ha_score",
+    "calculation": "${ha1}+${ha2}+${ha3}+${ha4}",
+    "label": NaN
+  },
+  {
+    "name": "h_pourcentage",
+    "calculation": "((${ha_score} div 40 *100))",
+    "label": NaN
+  },
+  {
+    "name": "h_ponderation",
+    "calculation": "((${h_pourcentage} *0.07))",
+    "label": NaN
+  },
+  {
+    "name": "h_majeur",
+    "calculation": "if(${ha1}='0', 1, 0) +if(${ha2}='0', 1, 0) +if(${ha3}='0', 1, 0)+if(${ha4}='0', 1, 0)",
+    "label": NaN
+  },
+  {
+    "name": "h_taux_majeur",
+    "calculation": "((${h_majeur} div 4 *100))",
+    "label": NaN
+  },
+  {
+    "name": "i_score",
+    "calculation": "${ia1}+if(${ia2}='10',10, 0)+${ia3}+${ia4}",
+    "label": NaN
+  },
+  {
+    "name": "i_possible",
+    "calculation": "if(${ia2}='na', 0, 10)+30",
+    "label": NaN
+  },
+  {
+    "name": "i_pourcentage",
+    "calculation": "if(${i_possible} > 0, round((${i_score} div ${i_possible}) * 100, 2), 0)",
+    "label": NaN
+  },
+  {
+    "name": "i_ponderation",
+    "calculation": "((${i_pourcentage} *0.07))",
+    "label": NaN
+  },
+  {
+    "name": "i_majeur",
+    "calculation": "if(${ia1}='0', 1, 0) +if(${ia2}='0', 1, 0) +if(${ia3}='0', 1, 0)+if(${ia4}='0', 1, 0)",
+    "label": NaN
+  },
+  {
+    "name": "i_taux_majeur",
+    "calculation": "((${i_majeur} div 4 *100))",
+    "label": NaN
+  },
+  {
+    "name": "total",
+    "calculation": "${a_ponderation}+${b_ponderation}+${c_ponderation}+${d_ponderation}+${e_ponderation}+${f_ponderation}+${g_ponderation}+${h_ponderation}+${i_ponderation}",
+    "label": NaN
+  },
+  {
+    "name": "total_remarque",
+    "calculation": "${d_remarque}",
+    "label": NaN
+  },
+  {
+    "name": "total_mineur",
+    "calculation": "${g_mineur}+${f_mineur}+${e_mineur}+${d_mineur}+${c_mineur}",
+    "label": NaN
+  },
+  {
+    "name": "total_majeur",
+    "calculation": "${a_majeur}+${b_majeur}+${c_majeur}+${d_majeur}+${e_majeur}+${f_majeur}+${g_majeur}+${h_majeur}+${i_majeur}",
+    "label": NaN
+  },
+  {
+    "name": "total_critique",
+    "calculation": "${a_critique}+${c_critique}+${d_critique}+${e_critique}+${f_critique}",
+    "label": NaN
+  },
+  {
+    "name": "total_taux_remarque",
+    "calculation": "((${total_remarque} div 3 *100))",
+    "label": NaN
+  },
+  {
+    "name": "total_taux_mineur",
+    "calculation": "((${total_mineur} div 24 *100))",
+    "label": NaN
+  },
+  {
+    "name": "total_taux_majeur",
+    "calculation": "((${total_majeur} div 126 *100))",
+    "label": NaN
+  },
+  {
+    "name": "total_taux_critique",
+    "calculation": "((${total_critique} div 15 *100))",
+    "label": NaN
+  }
+]

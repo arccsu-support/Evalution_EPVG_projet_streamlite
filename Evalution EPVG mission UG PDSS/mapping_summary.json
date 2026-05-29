@@ -1,0 +1,164 @@
+{
+  "establishment_cols": [
+    {
+      "type": "text",
+      "name": "nom_evaluateur",
+      "label": "Nom complet de l'évaluateur"
+    },
+    {
+      "type": "select_one province",
+      "name": "province_etablissement",
+      "label": "Province"
+    },
+    {
+      "type": "select_one ville",
+      "name": "ville_etablissement",
+      "label": "Ville"
+    },
+    {
+      "type": "select_one epvg",
+      "name": "nom_etablissement",
+      "label": "Nom de l'établissement"
+    },
+    {
+      "type": "text",
+      "name": "adresse_etablissement",
+      "label": "Adresse physique"
+    },
+    {
+      "type": "text",
+      "name": "tel_etablissement",
+      "label": "Téléphone de l'établissement"
+    },
+    {
+      "type": "text",
+      "name": "email_etablissement",
+      "label": "Email de l'établissement"
+    },
+    {
+      "type": "text",
+      "name": "nom_proprietaire",
+      "label": "Nom complet du propriétaire"
+    }
+  ],
+  "location_cols": [
+    {
+      "type": "select_one province",
+      "name": "province_etablissement",
+      "label": "Province"
+    },
+    {
+      "type": "select_one ville",
+      "name": "ville_etablissement",
+      "label": "Ville"
+    }
+  ],
+  "gps_cols": [
+    {
+      "type": "geopoint",
+      "name": "GEO_LOCALISATION",
+      "label": "GEO LOCALISATION"
+    }
+  ],
+  "date_cols": [
+    {
+      "type": "date",
+      "name": "date_evaluation",
+      "label": "Date de la dernière évaluation"
+    }
+  ],
+  "percentage_cols": [
+    {
+      "type": "calculate",
+      "name": "a_pourcentage",
+      "calculation": "((${a_score} div 25 *100))"
+    },
+    {
+      "type": "calculate",
+      "name": "b_pourcentage",
+      "calculation": "((${b_score} div 50 *100))"
+    },
+    {
+      "type": "calculate",
+      "name": "c_pourcentage",
+      "calculation": "if(${c_possible} > 0, round((${c_score} div ${c_possible}) * 100, 2), 0)"
+    },
+    {
+      "type": "calculate",
+      "name": "d_pourcentage",
+      "calculation": "if(${d_possible} > 0, round((${d_score} div ${d_possible}) * 100, 2), 0)"
+    },
+    {
+      "type": "calculate",
+      "name": "e_pourcentage",
+      "calculation": "if(${e_possible} > 0, round((${e_score} div ${e_possible}) * 100, 2), 0)"
+    },
+    {
+      "type": "calculate",
+      "name": "f_pourcentage",
+      "calculation": "if(${f_possible} > 0, round((${f_score} div ${f_possible}) * 100, 2), 0)"
+    },
+    {
+      "type": "calculate",
+      "name": "g_pourcentage",
+      "calculation": "if(${g_possible} > 0, round((${g_score} div ${g_possible}) * 100, 2), 0)"
+    },
+    {
+      "type": "calculate",
+      "name": "h_pourcentage",
+      "calculation": "((${ha_score} div 40 *100))"
+    },
+    {
+      "type": "calculate",
+      "name": "i_pourcentage",
+      "calculation": "if(${i_possible} > 0, round((${i_score} div ${i_possible}) * 100, 2), 0)"
+    }
+  ],
+  "total_cols": [
+    {
+      "type": "calculate",
+      "name": "total",
+      "calculation": "${a_ponderation}+${b_ponderation}+${c_ponderation}+${d_ponderation}+${e_ponderation}+${f_ponderation}+${g_ponderation}+${h_ponderation}+${i_ponderation}"
+    },
+    {
+      "type": "calculate",
+      "name": "total_remarque",
+      "calculation": "${d_remarque}"
+    },
+    {
+      "type": "calculate",
+      "name": "total_mineur",
+      "calculation": "${g_mineur}+${f_mineur}+${e_mineur}+${d_mineur}+${c_mineur}"
+    },
+    {
+      "type": "calculate",
+      "name": "total_majeur",
+      "calculation": "${a_majeur}+${b_majeur}+${c_majeur}+${d_majeur}+${e_majeur}+${f_majeur}+${g_majeur}+${h_majeur}+${i_majeur}"
+    },
+    {
+      "type": "calculate",
+      "name": "total_critique",
+      "calculation": "${a_critique}+${c_critique}+${d_critique}+${e_critique}+${f_critique}"
+    },
+    {
+      "type": "calculate",
+      "name": "total_taux_remarque",
+      "calculation": "((${total_remarque} div 3 *100))"
+    },
+    {
+      "type": "calculate",
+      "name": "total_taux_mineur",
+      "calculation": "((${total_mineur} div 24 *100))"
+    },
+    {
+      "type": "calculate",
+      "name": "total_taux_majeur",
+      "calculation": "((${total_majeur} div 126 *100))"
+    },
+    {
+      "type": "calculate",
+      "name": "total_taux_critique",
+      "calculation": "((${total_critique} div 15 *100))"
+    }
+  ]
+}

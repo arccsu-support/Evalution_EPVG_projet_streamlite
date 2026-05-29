@@ -1,0 +1,169 @@
+﻿type,name,label,importance
+select_one critique,aa1,L'établisssment est-il autorisé?,c
+select_one majeur,aa3,L'établissment est -il certifié par l'ACOREP/autre Organisme?,Ma
+select_one majeur,b1,Existe-il un manuel qualité signé par le responsable?,ma
+select_one majeur,b2,La politique Qualité est-elle declarée dans le manuel qualité décrivant les intentions et les exigences générales en matière de qualité.?,ma
+select_one majeur,b3,Liste des procédures est-elle disponible?,ma
+select_one majeur,b4, Existe til la procédure des procedures,ma
+select_one majeur,b5," les procédures sont elles signées? (3 signatures Operationnel, RAQ et le Responsable )",ma
+select_one critique,ca1,Disposez-vous d’un pharmacien Responsable ?,c
+select_one majeur,ca2,Est-il titulaire d’un diplôme ou Tenant Lieu  ?,ma
+select_one majeur,ca3,Possede-t-il un Certificat d’exercer ?,ma
+select_one majeur,ca4,Est-il inscrit au tableau de l'Ordre?,ma
+select_one majeur_na,ca5,Dispose-t-il d’un contrat de travail légalisé ?,ma
+select_one critique,cb1,Disposez-vous d’un personnel qualifié chargé de l’assurance qualité ?,c
+select_one majeur,cb2,Est-il titulaire d’un diplôme ou Tenant Lieu  ?,ma
+select_one majeur_na,cb3,Est-il inscrit au tableau de l'Ordre?,ma
+select_one majeur_na,cb4,Possede-t-il un Certificat d’exercer ?,ma
+select_one majeur,cb5,Dispose-t-il d’un contrat de travail légalisé ?,ma
+select_one majeur,cc1,Disposez-vous d’un ou de plusieurs assistants/techniciens en pharmacie ??,ma
+select_one majeur,cc2,Est-il / sont-ils titulaires du ou des diplôme(s) requis ?,ma
+select_one majeur,cc3,Dispose-t-il / disposent-ils de la ou des carte(s) verte(s) ?,ma
+select_one majeur,cc4,Dispose-t-il / disposent-ils du ou des contrat(s) de travail dûment légalisé(s) ?,ma
+select_one mineur,cd1,L’effectif du personnel est-il suffisant au regard des activités exercées ? (Voir la liste),mi
+select_one majeur,ce1,Existe-t-il un organigramme  ?,ma
+select_one majeur,ce2,"L’organigramme est-il signé, daté, et affiché ?",ma
+select_one majeur,ce3,Est-il fonctionnel ?,ma
+select_one majeur,cf1,Existe-t-il une description de fonctions pour chaque poste clé ?,ma
+select_one majeur,cf2,Les fiches de poste (job descriptions) sont-elles claires et sans chevauchement ?,ma
+select_one majeur,cf3,Est-il signé par le responsable de l’établissement et le concerné ?,ma
+select_one majeur,cg1,Existe-t-il la procédure de formation?,Ma 
+select_one mineur,cg2,Est elle respectée?,Mi
+select_one majeur ,cg3,Existe-t-il Un programme annuel de formation ( à l’embauche et en continu)?,Ma
+select_one mineur ,cg4,Ce programme est il respecté?,Mi
+select_one majeur,cg5,Les formations sont elles enregistré? (registre et rapport de formation),Ma
+select_one mineur ,cg6,les formations sont elles evaluées?,Mi
+select_one majeur_na,cg7,"Le personnel manipulant des produits dangereux (stupéfiants, produits toxiques, inflammables ou sensibles) a-t-il bénéficié d’une formation spécifique ?",Ma 
+select_one majeur,cg8,Les formations initilales à l'embauche et continue mettent elles un accent particulier aux BPDs et concernent t'elle tout le personnel?,Ma 
+select_one majeur,ch1,Existe-t-il des procédures d’hygiène du personnel ?,Ma
+select_one majeur,ch2,Est elle respectée?,Ma
+select_one majeur,ch3,Le personnel porte-t-il des tenues appropriées et conformes aux exigences d’hygiène  ?,Ma
+select_one majeur,ch4,"les instruction d'hygiènes sont elle affichés?La mention « Interdiction de manger, de boire et de fumer » est-elle affichée dans toutes les zones où des produits médicaux sont stockés ou manipulés ?",Ma
+select_one majeur,ch5,"Existe-t-il une procédure encadrant le personnel (employé, sous traitant, personnel intérimaire et autre personne) ayant accès aux produits médicaux, afin de minimiser les risques que ces produits pharmaceutiques viennent à etre detenu par des personnes non autorisés ?",Ma
+select_one remarque,da1,L’établissement dispose-t-il d’une liste à jour des fournisseurs  des produits commercialisés ?,Re
+select_one remarque_na,da2, L’établissement procède-t-il à l’importation de médicaments ?,Re
+select_one critique_na,da3, Disposez-vous d' une dérogation des médicaments interdits à l' importation  ?,C
+select_one critique,da4,les médicaments distribués ont-ils des AMM valide ? (10 produits au hasard),C
+select_one critique,da5,Disposez-vous des copies des certificats d’analyse du fabricant pour chaque lot fourni par vos fournisseurs ?,C
+select_one critique,da6,Existe-t-il des licences  d’importation valides pour les psychotropes importés par l’établissement ?,C
+select_one majeur,da7,L’établissement dispose-t-il d’une procédure écrite relative à la commande des médicaments,MA
+select_one mineur,da8,Les documents sont-ils  facilement disponibles et accessibles? (archivages),Mi
+select_one majeur,db1,Existe-t-il une procédure de réception des produits lors de leur arrivée ?,Ma
+select_one critique_na,db2,"Est -il possible de verifier les elements suivants :  Bon de commande , facture d'achat,liste de collisage et verifiez la confirmité d' étiquetage, Numero de lot , quantité, peremption ) dernière réception ",C
+select_one mineur_na,db3,Les prélèvements de produits médicaux sont-ils effectués dans le strict respect des plans d’échantillonnage écrits et des instructions d’échantillonnage établies pour l’analyse ?,Mi
+select_one critique_na,db4,"Après le prélèvement, les produits médicaux sont-ils placés en quarantaine et maintenus sous ce statut jusqu’à la décision du service Assurance Qualité / Laboratoire ?",C
+select_one majeur_na,dc1,Avez-vous un contrat de sous-traitance de transport ?,Ma
+select_one majeur_na,dc2,Avez-vous un contrat de sous-traitance de livraison  ?,Ma
+select_one majeur_na,dc3,Avez-vous un contrat de sous-traitance pour l'entretien des Équipements?,Ma
+select_one majeur_na,dc4,Avez-vous un contrat de sous-traitance de lutte contre les  nuisibles,Ma
+select_one majeur,dc5,Existe-t-il un contrat de prise en charge sanitaire  du personnel ?,Ma
+select_one majeur_na,dc6,Existe-t-il un contrat de sous-traitance  pour l’élimination des déchets ?,Ma
+select_one critique_na,dc7,Une évaluation préalable des sous-traitants est-elle réalisée avant la signature du contrat ?,C
+select_one majeur,de1,Disposez-vous d’une procédure documentée pour la tenue de l’inventaire ?,Ma
+select_one mineur,de2,Le respect de la périodicité des inventaires est-il assuré ?,Mi
+select_one majeur,de3,Les numéros de lots sont-ils pris en compte lors des inventaires ?,Ma
+select_one majeur,de4,Disposez-vous du rapport du dernier inventaire réalisé ainsi que du plan d’actions correctives et préventives (CAPA) associé ?,Ma
+select_one remarque,de5,Disposez-vous d’une évaluation actualisée de la valeur du stock de médicaments ?,Re
+select_one majeur,ea1,"Le bâtiment est-il construit en materiaux durable, plafonné,electrifié superficie d'au moins 150 metres carré et le nombre au moins 5 pieces? ",ma
+select_one majeur,ea3, Un plan des locaux (croquis interne) est-il disponible ?,ma
+select_one majeur,ea4,L’agencement des locaux est-il logique et adapté aux activités réalisées ?,ma
+select_one mineur,ea5,Le bureau du pharmacien est-il suffisamment spacieux (≥ 9 m²) ?,mi
+select_one majeur,ea6,"Les murs sont-ils en bon état, propres et bien entretenus ?",ma
+select_one majeur,ea7,"Le pavement (sol) est-il en bon état, propre et bien entretenu ?",ma
+select_one majeur,ea8,L’état du plafond est-il satisfaisant ?,ma
+select_one majeur_na,ea10, Les produits inflammables sont-ils stockés dans un local spécifiquement dédié et sécurisé ?,ma
+select_one majeur,ea11,Les zones de réception et d’expédition sont-elles physiquement séparées afin d’éviter tout mélange de produits ?,ma
+select_one majeur,ea12,Existe-t-il une zone de quarantaine  non loin de la zone de reception  clairement identifiée et séparée des zones de stockage utilisables ?,ma
+select_one majeur,ea14,Une zone de rebuts est-elle disponible et clairement identifiée ?,ma
+select_one majeur,ea16, Existe-t-il une séparation claire entre les flux du personnel et ceux des produits ?,ma
+select_one majeur,eb1,"Le quai de déchargement permet-il une réception sécurisée des produits, à l’abri des intempéries et conforme aux bonnes pratiques ?",ma
+select_one mineur,eb2,Un SAS d’entrée (SAS-in) est-il disponible ?,mi
+select_one majeur,eb3,La  cantine ou cafétéria et salle de reunion sont-elles séparées des zones où les produits médicaux sont manipulés ou stockés ?,ma
+select_one mineur,eb4,Une salle d’administration est-elle disponible ?,mi
+select_one majeur,eb5,Des vestiaires sont-ils disponibles? dans un état de propreté ? ,ma
+select_one majeur,eb6,"Les installations sanitaires sont-elles maintenues dans un état de propreté satisfaisant( eclairées, aération,l'eau qui coule et présence du savon et PH) ?",ma
+select_one majeur,ec1,Disposez-vous d’une procédure de stockage ?,ma
+select_one majeur,ec2,Disposez-vous d’une procédure de contrôle pour eviter la contamination et/ou les mélanges pendant le stockage ?,ma
+select_one majeur,ec3,Les produits pharmaceutiques sont-ils classés et gérés conformément aux principes FIFO et/ou FEFO ?,ma
+select_one majeur,ec4,Les zones de stockage ont-elles une capacité suffisante (pour la CDR 1350 Pour le stockage et 1500 metre carré pour toute la CDR )pour permettre un stockage ordonné des différentes catégories de produits médicaux ?,ma
+select_one majeur,ec5,Respectez-vous les instructions et les informations  de conservation mentionnées sur l' étiquetage  fournies par les fabricants?.,ma
+select_one majeur,ec6,Les locaux d'entreposage  des produits  de santé sont-ils propres ?,ma
+select_one mineur,ec8,Les étagères et armoires sont-elles disponibles ?,mi
+select_one majeur,ec9,"La propreté des étagères est-elle assurée, sans accumulation de poussière ?",ma
+select_one mineur,ec10,L étagères sont-elles non encombrées et bien ordonnées?,mi
+select_one majeur,ec12,Les palettes -elles disponibles en nombre suffisant ?,ma
+select_one majeur,ec13,Les palettes sont-elles conformes et conçues de manière à permettre un nettoyage facile ?,ma
+select_one majeur,ec14,"Les produits sont-ils tous stockés  hors sol ? (Si non, lesquels ?)",ma
+select_one majeur,ec16,"Les produits sont-ils entreposés  à distance des murs?  (Si non, lesquels ?)",ma
+select_one majeur,ec17,"Le stockage des produits jusqu’au plafond est-il évité ?(si non, lesquels)",ma
+select_one critique,ec18,"Les produits pharmaceutiques périmés, altérés ou endommagés sont-ils systématiquement retirés des rayons? (si non , lesquels)",c
+select_one critique,ec19,"Les produits pharmaceutiques thermolabiles sont-ils exclusivement stockés dans des conditions de température contrôlée, hors des rayons ? (si non, lesquels)",c
+select_one majeur,ec20,Garantissez-vous qu’aucun médicament en stock ne présente une date de péremption proche (inférieure à six mois) ?,ma
+select_one majeur,ec21,les mesures de lutte contre le  nuisibles sont-elles mises en place (trelli et autres) ?,ma
+select_one mineur,ec23,Les locaux de stockage des produits pharmaceutiques sont-ils exempts de poubelles ?,mi
+select_one majeur_na,ed1,Disposez-vous d’une procédure de conservation au froid des produits thermolabiles?,ma
+select_one majeur,ed2,"Disposez-vous d’un  réfrigérateur fonctionnel pour le stockage des produits  thermolabiles ? (Si oui, nombre)Est- il propre à l’intérieur (absence de givre, d'eau et aliments ) ?",ma
+select_one majeur,ed3,Un thermomètre fonctionnel  dans le refrigerateur est-il présent pour le contrôle de la température ?,ma
+select_one majeur,ed5,Le thermomètre utilisé pour la surveillance a-t-il été étalonné et est-il adapté à l’usage auquel il est destiné ?,ma
+select_one majeur,ed7,Les relevés de température et les incidents sont-ils enregistrés et à jour ?,ma
+select_one majeur ,ef1,Disposez-vous d’une procédure de nettoyage ?,ma
+select_one mineur,ef2,Existe-t-il un programme écrit de désinfection des locaux ?,mi
+select_one mineur,ef3,Existe-t-il un planning de nettoyage précisant les horaires ainsi que le nom de la personne chargée de chaque tâche ?,mi
+select_one majeur,ef4,Les matériels d’entretien sont-ils disponibles et entreposés en dehors des locaux de stockage des produits pharmaceutiques ?,ma
+select_one majeur,ef5,Existe-t-il une procédure écrite et appliquée pour l’élimination des déchets ?,ma
+select_one majeur,eg1,"Les locaux sont-ils équipés d’un nombre suffisant de systèmes de climatisation (splits) et de plafonniers, fonctionnels?",ma
+select_one mineur,eg2,Chaque local d'entreposage  dispose-t-il d’un éclairage suffisant?,mi
+select_one majeur,eg3,Chaque local d'entreposage  dispose-t-il d’un hygromètre fonctionnel ?,ma
+select_one majeur,eg5,Chaque local d'entreposage  dispose-t-il d’un thermomètre  fonctionnel ?,ma
+select_one mineur,eg7,Les thermometre et hygromètres sont-ils placés aux emplacements appropriés ?,mi
+select_one mineur,eg8,Les thermometre et hygromètres sont-ils etalonnés ?,mi
+select_one mineur,eg9,"Des études de cartographie de la température et, le cas échéant, de l’humidité relative sont-elles réalisées dans les réfrigérateurs  les congélateurs  et la salle de stockage ?",mi
+select_one majeur,eg10,Existe-t-il une procédure relative à la cartographie et à l’enregistrement des températures ?,ma
+select_one majeur,eh1,Existe-t-il une procédure de sécurité  ?,ma
+select_one majeur,eh2,Existe-il la une procédure écrite de lutte contre l’incendie ?,ma
+select_one majeur,eh3,Tous les extincteurs sont-ils disponible et entretenus de manière appropriée ?,ma
+select_one majeur,eh4,Existe-t-il un système d’alarme fonctionnel en cas d’incendie ou de danger ?,ma
+select_one mineur,eh5,Existe-t-il des caméras de surveillance fonctionnelles dans les locaux ?,mi
+select_one majeur,eh7,Existe-t-il un dispositif empêchant l’accès aux médicaments à toute personne non autorisée ?,ma
+select_one majeur,ei1, Le nombre de kits informatiques est-il suffisant ?,ma
+select_one majeur,ei2,Le système informatique est-il validé ?,ma
+select_one majeur,ei3,Existe-t-il une traçabilité fiable des entrées et sorties dans le logiciel ?,ma
+select_one majeur,ei4,Existe-t-il une procédure mise en place pour garantir la traçabilité et la confiance dans la chaîne d’approvisionnement ainsi que pour les produits concernés ?,ma
+select_one majeur,ei5,Le logiciel utilisé intègre-t-il le paramètre « date d’expiration » ?,ma
+select_one majeur,ei6,Le logiciel utilisé intègre-t-il le paramètre « Fournisseur » ?,ma
+select_one majeur,ei7,Le logiciel utilisé intègre-t-il le paramètre « Nom du client» ?,ma
+select_one majeur,ei8,Le logiciel utilisé intègre-t-il le paramètre « numéro de lot » ?,ma
+select_one majeur_na,ej1,Existe-t-il une liste à jour de tous les fournisseurs ?,ma
+select_one critique,ej2,Existe-t-il un local dédié aux stupéfiants et psychotropes ou une armoire sécurisée à poisons fermé à clé?,c
+select_one majeur,ej3,Existe-t-il une procédure de gestion des psychotropes et stupéfiants ?,ma
+select_one majeur,ej4,Existe-t-il un registre de comptabilité des psychotropes et stupéfiants ?,ma
+select_one majeur,ej5,  Le registre est-il correctement rempli et tenu à jour ?,ma
+select_one majeur,ej6,Existe-t-il un carnet de bons de commande pour les psychotropes et stupéfiants ?,ma
+select_one majeur,ej7,Les psychotropes et stupéfiants sont-ils absents des rayons de stockage général ?,ma
+select_one majeur,fa1,Existe-t-il une procédure  de livraison et d’envoi des produits ?,MA
+select_one majeur,fa2,"Les produits médicaux sont-ils vendus et/ou distribués uniquement à des pharmacies autorisées à les acquérir, conformément à la législation nationale ?",MA
+select_one mineur_na,fa3,"Disposez-vous de véhicules adaptés, suffisamment spacieux et équipés de manière appropriée pour assurer la protection des produits médicaux pendant le transport ?",MI
+select_one mineur_na,fa4,Les véhicules utilisés pour le transport des produits médicaux sont-ils conformes  aux normes de  transport des produits de santé?,MI
+select_one majeur,fa5,Existe-t-il une procédure de transport des produits médicaux?,MA
+select_one critique_na,fa6,"Existe-t-il des dispositions spécifiques pour le transport des produits thermolabile(camions frigorifiques boites isothermes ,accumulateurs) ?",C
+select_one critique_na,fa7,Existe-t-il des dispositions spécifiques pour le transport des stupéfiants et des psychotropes,C
+select_one majeur,ga1,Existe-t-il une procédure de retour des produits de santé?,ma
+select_one majeur_na,ga2,Les produits médicaux retournés font-ils systématiquement l’objet d’une mise en quarantaine immédiate dès leur réception ?,ma
+select_one majeur,ga3,Existe-t-il un rapport documenté relatif aux retours de produits  de santé effectués?,ma
+select_one majeur,ga4,Existe-t-il une procédure de rappel efficace et rapide  des produits de santé?,ma
+select_one mineur,ga5,"Les registres des produits médicaux retournés, refusés, rappelés  et détruits sont-ils tenus et conservés pendant une durée définie ?",mi
+select_one majeur_na,ga6,Existe-t-il un rapport documenté relatif au rappel de lot  de produits de santé  effectués?,ma
+select_one majeur_na,ga7,Les produits retournés et  rappelés sont-ils stockés de manière séparée et sécurisée ?,ma
+select_one majeur,gb1,Existe-t-il une procédure de traitement des plaintes ?,ma
+select_one majeur_na,gb2,"Les réclamations font-elles l’objet d’un enregistrement, d’une enquête documentée, d’une analyse de la cause profonde et d’une évaluation de leurs impacts ?",ma
+select_one majeur_na,gb3,Des CAPA appropriées sont-elles mises en place et leur efficacité évaluée ?,ma
+select_one majeur_na,gb4,"Les informations pertinentes, notamment les résultats de l’enquête, sont-elles partagées avec les entités concernées ?",ma
+select_one mineur,gb5,"Au cas ou le retour,rappel et reclamations n'ont pas eu lieu, existe-t-il un rapport de simulation",mi
+select_one majeur,ha1,Existe-t-il une procédure d’auto-inspection ?,ma
+select_one majeur,ha2,Existe-t-il un programme ou un calendrier d’auto-inspection ?,ma
+select_one majeur,ha3,"L’équipe d’auto evaluation est-elle désignée, impartiale et compétente ?",ma
+select_one majeur,ha4,Les rapports d’ auto évaluation  contiennent-ils l’ensemble des observations formulées  et sont-ils transmis à la direction ainsi qu’aux personnels concernés ?,ma
+select_one majeur,ia1,Existe-t-il une procedure de gestion  des produits  falsifiés et de qualité inférieure ?,ma
+select_one majeur_na,ia2,Avez-vous informé  l' Autorité de reglementation  ainsi que le titulaire de l'AMM des cas de produits falsifiés ou de qualité inférieure (PFQI) au sein de l’établissement ?,ma
+select_one majeur,ia3,"Les produits concernés font-ils l’objet d’un stockage dans une zone dédiée et sécurisée, avec un étiquetage clair permettant d’empêcher toute distribution ou vente ultérieure ?",ma
+select_one majeur,ia4,Les investigations et les actions d’élimination sont-elles documentées pour empêcher toute remise en circulation des produits ?,ma

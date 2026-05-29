@@ -1,0 +1,79 @@
+﻿type,name,label
+begin_group,info_proprietaire,Informations du propriétaire
+end_group,,
+begin group,group_org,ORGANISATION ET GESTION
+begin group,subgroup_I_1,Existence des documents d'ouvertures commerciaux/Asbl
+end group,,
+end group,,
+begin group,a,1.     ORGANISATION DE L’ETABLISSEMENT
+begin group,aa,Dossier d'autorisation d'ouverture
+end group,,
+end group,,
+begin group,b,2.      SYSTÈME  QUALITE
+end group,,
+begin group,c,3.     PERSONNEL
+begin group,ca,Pharmacien Responsable
+end group,,
+begin group,cb,Pharmacien chargé Assurance Qualité
+end group,,
+begin group,cc,Assistant(s) en Pharmacie
+end group,,
+begin group,cd,Autre personnel
+end group,,
+begin group,ce,Organigramme 
+end group,,
+begin group,cf,Job description
+end group,,
+begin group,cg,Formation du personnel
+end group,,
+begin group,ch, Hygiène du personnel
+end group,,
+end group,,
+begin group,d,4.    DOCUMENTATION
+begin group,da,Commande-Importation
+end group,,
+begin group,db,Réception médicaments
+end group,,
+begin group,dc, Activités externalisées
+end group,,
+begin group,de,Inventaire
+end group,,
+end group,,
+begin group,e,5. BATIMENTS LOCAUX ET APPAREILLAGE
+begin group,ea,Locaux
+end group,,
+begin group,eb, Zones annexes
+end group,,
+begin group,ec,Stockage
+end group,,
+begin group,ed,Conservation au froid
+end group,,
+begin group,ef,Nettoyage et entretien
+end group,,
+begin group,eg,"Lumière, humidité et température"
+end group,,
+begin group,eh,Mesure de sécurité
+end group,,
+begin group,ei,Gestion des opération d’enregistrement des entrées des produits
+end group,,
+begin group,ej,Gestion des Psychotropes et stupéfiants et précurseurs chimiques
+end group,,
+end group,,
+begin group,f,6. LIVRAISON AUX CLIENTS ET TRANSPORT
+begin group,fa,Tracabilité/Expedition
+end group,,
+end group,,
+begin group,g,7.     RETOUR AUX EXPEDITEURS
+begin group,ga,Retour et Rappel de lot
+end group,,
+begin group,gb,Gestion des plaintes/Reclamations
+end group,,
+end group,,
+begin group,h,8.        AUTO-INSPECTION
+begin group,ha,Auto-Evaluation
+end group,,
+end group,,
+begin group,i,9.        AUTRES POINTS SPECIFIQUES
+begin group,ia,Reconditionnement et réétiquetage
+end group,,
+end group,,

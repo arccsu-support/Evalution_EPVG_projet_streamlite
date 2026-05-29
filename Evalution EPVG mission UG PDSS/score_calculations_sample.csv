@@ -1,0 +1,32 @@
+﻿name,calculation,label
+score_organisation_et_gestion,"(
+  (
+    coalesce(${q_f25ddf6b}, 0) +
+    coalesce(${q_5d65471f}, 0) +
+    coalesce(${q_150b111c}, 0) +
+    coalesce(${q_3aa06a45}, 0) +
+    coalesce(${q_03810344}, 0) +
+    coalesce(${q_996b56b8}, 0)
+  ) * 3
+) + (
+  coalesce(${q_8b7525a2}, 0) * 5
+)",
+a_score,${aa1}+${aa3},
+a_pourcentage,((${a_score} div 25 *100)),
+b_score,${b1}+${b2}+${b3}+${b4}+${b5},
+b_pourcentage,((${b_score} div 50 *100)),
+ca_score,"if(${ca1}='15',15, 0)+if(${ca2}='10',10, 0)+if(${ca3}='10',10, 0)+if(${ca4}='10',10, 0)+if(${ca5}='10',10, 0)",
+cb_score,"if(${cb1}='15',15, 0)+if(${cb2}='10',10, 0)+if(${cb3}='10',10, 0)+if(${cb4}='10',10, 0)+if(${cb5}='10',10, 0)",
+cc_score,"${cc1}+if(${cc2}='10',10, 0)+if(${cc3}='10',10, 0)+if(${cc4}='10',10, 0)",
+cd_score,${cd1},
+ce_score,"${ce1}+if(${ce2}='10',10, 0)+if(${ce3}='10',10, 0)",
+cf_score,${cf1}+${cf2}+${cf3},
+cg_score,"${cg1}+${cg2}+${cg3}+${cg4}+${cg5}+${cg6}+if(${cg7}='10',10, 0)+${cg8}",
+ch_score,${ch1}+${ch2}+${ch3}+${ch4}+${ch5},
+c_score,${ca_score}+${cb_score}+${cc_score}+${cd_score}+${ce_score}+${cf_score}+${cg_score}+${ch_score},
+c_pourcentage,"if(${c_possible} > 0, round((${c_score} div ${c_possible}) * 100, 2), 0)",
+da_score,"${da1}+if(${da2}='1',1, 0)+if(${da3}='15',15, 0)+${da4}+${da5}+${da6}+${da7}+${da8}",
+db_score,"${db1}+if(${db2}='15',15, 0)+if(${db3}='5',5, 0)+if(${db4}='15',15, 0)",
+dc_score,"if(${dc1}='10',10, 0)+if(${dc2}='10',10, 0)+if(${dc3}='10',10, 0)+if(${dc4}='10',10, 0)+${dc5}+if(${dc6}='10',10, 0)+if(${dc7}='15',15, 0)",
+de_score,${de1}+${de2}+${de3}+${de4}+${de5},
+d_score,${da_score}+${db_score}+${dc_score}+${de_score},

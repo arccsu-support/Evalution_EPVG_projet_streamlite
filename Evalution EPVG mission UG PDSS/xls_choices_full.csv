@@ -1,0 +1,239 @@
+﻿list_name,name,label,province
+epvg,arauphar-lubumbashi  ,ARAUPHAR,lubumbashi
+epvg,moonpharma-lubumbashi    ,MOONPHARMA,lubumbashi
+epvg,phatkin-lubumbashi    ,PHATKIN,lubumbashi
+epvg,promed_pharma-lubumbashi    ,PROMED PHARMA,lubumbashi
+epvg,roshane_pharma-lubumbashi   ,ROSHANE PHARMA,lubumbashi
+epvg,shalina_health_care-lubumbashi  ,SHALINA HEALTH CARE,lubumbashi
+epvg,sky_pharma-lubumbashi  ,SKY PHARMA,lubumbashi
+epvg,unique_pharma-lubumbashi    ,UNIQUE PHARMA,lubumbashi
+epvg,promed_pharma-kolwezi  ,PROMED PHARMA,kolwezi
+epvg,sky_pharma-kolwezi  ,SKY PHARMA,kolwezi
+epvg,shalina_health_care-kolwezi  ,"SHALINA HEALTH
+CARE",kolwezi
+epvg,phatkin-kolwezi  ,PHATKIN,kolwezi
+epvg,arauphar-kolwezi,ARAUPHAR,kolwezi
+epvg,roshane_pharma-kolwezi  ,ROSHANE PHARMA,kolwezi
+epvg,unique_pharma-kolwezi ,UNIQUE PHARMA,kolwezi
+epvg,moonpharma-kolwezi ,MOONPHARMA,kalemie
+epvg,amaph_pharma  ,AMAPH PHARMA,lubumbashi
+epvg,amen_pharma  ,AMEN PHARMA,lubumbashi
+epvg,arova_pharma  ,AROVA PHARMA,lubumbashi
+epvg,avrilpharma  ,AVRILPHARMA,lubumbashi
+epvg,shalina_haelthcare_likasi  ,"SHALINA HAELTHCARE
+LIKASI",lubumbashi
+epvg,catopharma  ,CATOPHARMA,lubumbashi
+epvg,uniqueparma  ,UNIQUEPARMA,lubumbashi
+epvg,crownpharma  ,CROWNPHARMA,lubumbashi
+epvg,depaack_pharma  ,DEPAACK PHARMA,lubumbashi
+epvg,shalina_haelthcare  ,SHALINA HAELTHCARE,lubumbashi
+epvg,duapharma  ,DUAPHARMA,lubumbashi
+epvg,galerie_galaxie  ,GALERIE GALAXIE,lubumbashi
+epvg,get_well_pharma  ,GET WELL PHARMA,lubumbashi
+epvg,getraco  ,GETRACO,lubumbashi
+epvg,kin_med_plus_1_pharma  ,"KIN MED PLUS 1
+PHARMA",lubumbashi
+epvg,life_pharma  ,LIFE PHARMA,lubumbashi
+epvg,medico_pharma_2  ,MEDICO PHARMA 2,lubumbashi
+epvg,medico_plus_pharma_1  ,"MEDICO PLUS PHARMA
+1",lubumbashi
+epvg,mia_pharma  ,MIA PHARMA,lubumbashi
+epvg,nexapharma  ,NEXAPHARMA,lubumbashi
+epvg,noorpharma  ,NOORPHARMA,lubumbashi
+epvg,phatkin_labo  ,PHATKIN LABO,lubumbashi
+epvg,planetpharma  ,PLANETPHARMA,lubumbashi
+epvg,premiphar  ,PREMIPHAR,lubumbashi
+epvg,prince_pharma_2  ,PRINCE PHARMA 2,lubumbashi
+epvg,prince_pharma_kenya  ,PRINCE PHARMA KENYA,lubumbashi
+epvg,prince_pharma_kasumbalesa  ,"PRINCE PHARMA
+KASUMBALESA",lubumbashi
+epvg,prince_pharma_likasi  ,PRINCE PHARMA LIKASI,lubumbashi
+epvg,princepharma_i  ,PRINCEPHARMA I,lubumbashi
+epvg,princepharma_ii  ,PRINCEPHARMA II,lubumbashi
+epvg,promed_labo  ,PROMED LABO,lubumbashi
+epvg,sifa_pharma  ,SIFA PHARMA,lubumbashi
+epvg,universel_pharma  ,UNIVERSEL PHARMA,lubumbashi
+epvg,vista_pharma  ,VISTA PHARMA,lubumbashi
+epvg,zenufa  ,ZENUFA,lubumbashi
+epvg,kin_med_plus_pharma  ,KIN MED PLUS PHARMA,lubumbashi
+epvg,get_well  ,GET WELL,lubumbashi
+epvg,cdr_camelu  ,CDR CAMELU,lubumbashi
+epvg,gulbab_pharma_sarl  ,"GULBAB PHARMA
+SARL",kolwezi
+epvg,prince_pharma_i  ,PRINCE PHARMA. I,kolwezi
+epvg,prince_pharma_ii  ,PRINCE PHARMA II,kolwezi
+epvg,prince_pharma_iii  ,PRINCE PHARMA III,kolwezi
+epvg,moon_pharma  ,MOON PHARMA,kolwezi
+epvg,medico_plus  ,MEDICO PLUS,kolwezi
+epvg,planet_pharma_sarl  ,"PLANET PHARMA
+SARL",kolwezi
+epvg,sahara_pharma  ,SAHARA PHARMA,kolwezi
+epvg,kin_med  ,KIN- MED,kolwezi
+epvg,prince_fugurume  ,PRINCE FUGURUME,kolwezi
+epvg,prince_pharma  ,PRINCE PHARMA,kalemie
+epvg,shalina_healthcare  ,SHALINA HEALTHCARE,kalemie
+epvg,cedamet,CEDAMET,kalemie
+epvg,cdr_camelu_lualaba  ,CDR CAMELU,kolwezi
+epvg,appolo_pharma,APPOLO PHARMA,kolwezi
+epvg,shalina_2,SHALINA 2,kolwezi
+epvg,epvg_kin1,SANTE VIE,kin
+epvg,epvg_kin2,GRUMED SARL ,kin
+epvg,epvg_kin3,PHARMAGROS,kin
+epvg,epvg_kin4,COMECOM SARL 24 Novembre ,kin
+epvg,epvg_kin5,DOCTOR PHARMA SARL,kin
+epvg,epvg_kin6,ZENUFA HEALTH SARL,kin
+epvg,epvg_kin7,PLANET PHARMA,kin
+epvg,epvg_kin8,PRINCE PHARMA,kin
+epvg,epvg_kin9,ARAUPHAR,kin
+epvg,epvg_kin10,GABAHEL PHARMA ,kin
+epvg,epvg_kin11,AFRICA MEDICAL CARE,kin
+epvg,epvg_kin12,SHALINA HEALTHCARE,kin
+epvg,epvg_kin13,PHARMAVIE BIBWA,kin
+epvg,epvg_kin14,GETRACO,kin
+epvg,epvg_kin15,CAISSA PHARMA,kin
+epvg,epvg_kin16,EVER GREEN DISTRIBUTION,kin
+epvg,epvg_kin17,PHARMEX,kin
+epvg,epvg_kin18,IMEX PHARMA DISTRIBUTION,kin
+epvg,epvg_kin19,MOON PHARMA,kin
+epvg,epvg_kin20,ESSOR EQUIPEMENT,kin
+epvg,epvg_kin21,STE ALLIANCE SARL,kin
+epvg,epvg_kin22,SKY PHARMA,kin
+epvg,epvg_kin23,MARIANE PHAR,kin
+epvg,epvg_kin24,PATRIOTE,kin
+epvg,epvg_kin25,AMT PHARMA,kin
+epvg,epvg_kin26,HEALTHY  PHARMA ,kin
+epvg,epvg_kin27,NEW SPAIN,kin
+epvg,epvg_kin28,SAINT SAUVEUR ,kin
+epvg,epvg_kin29,UNIQUE PHARMA,kin
+epvg,epvg_kin30,CAMESKIN,kin
+epvg,epvg_autre_kin,AUTRE,kin
+epvg,epvg_kikwit1,PROMED,kikwit
+epvg,epvg_kikwit2,MOON PHARMA,kikwit
+epvg,epvg_kikwit3,ALLIANCE PHARMA,kikwit
+epvg,epvg_kikwit4,ALPHA PHARMA,kikwit
+epvg,epvg_kikwit5,KINMED PHARMA,kikwit
+epvg,epvg_kikwit6,SHALINA ,kikwit
+epvg,epvg_kikwit7,UNIQUE PHARMA ,kikwit
+epvg,epvg_kikwit8,PRINCE PHARMA,kikwit
+epvg,epvg_kikwit9,STAR PHARMA,kikwit
+epvg,epvg_kikwit10,MEDICO PLUS PHARMA,kikwit
+epvg,epvg_kikwit11,CAMEBASU,kikwit
+epvg,epvg_autre_kikwit,AUTRE,kikwit
+epvg,epvg_bandundu1,UNIQUE PHARMA ,bandundu_ville
+epvg,epvg_bandundu2,PRINCE PHARMA,bandundu_ville
+epvg,epvg_bandundu3,SHALINA ,bandundu_ville
+epvg,epvg_bandundu4,LIFE CARE PHARMA,bandundu_ville
+epvg,epvg_autre_bandundu,AUTRE,bandundu_ville
+epvg,epvg_idiofa,PRINCE PHARMA,idiofa
+epvg,epvg_autre_idiofa,AUTRE,idiofa
+epvg,epvg_kasai_central1,SHALINA ,kasai_central
+epvg,epvg_kasai_central2,PRINCE PHARMA,kasai_central
+epvg,epvg_kasai_central3,UNIQUE PHARMA ,kasai_central
+epvg,epvg_kasai_central4,ARAUPHAR,kasai_central
+epvg,epvg_kasai_central5,PLANET PHARMA,kasai_central
+epvg,epvg_kasai_central6,CADIMEK (CDR),kasai_central
+epvg,epvg_autre_kasai_c,AUTRE,kasai_central
+epvg,epvg_kasai1,SHALINA,kasai
+epvg,epvg_kasai2,PRINCE PHARMA ,kasai
+epvg,epvg_kasai3,UNIQUE PHARMA,kasai
+epvg,epvg_kasai4,CEDIMET ( CDR),kasai
+epvg,epvg_autre_kasai,AUTRE,kasai
+,,,
+fon_ess,Ph_titulaire,Pharmacien titulaire,
+fon_ess,Ph_ass,Pharmacien assistant,
+fon_ess,ass_ph,Assistant pharmacie,
+fon_ess,gerant,Gérant,
+fon_ess,proprietaire,Propriétaire,
+fonction,Directeur,Directeur,
+fonction,pip,Pharmacien inspecteur provincial,
+fonction,Chef_Division,Chef de Division,
+fonction,Chef_Service,Chef de Service,
+fonction,Chef_Bureau,Chef de Bureau,
+fonction,Consultant,Consultant,
+fonction,Autre,Autre,
+forme_jur,SARL,SARL,
+forme_jur,SPRL,SPRL,
+forme_jur,SA,SA,
+forme_jur,SAS,SAS,
+forme_jur,SNC,SNC,
+forme_jur,SCS,SCS,
+forme_jur,GIE,GIE,
+forme_jur,ETS,ETS,
+forme_jur,ASBL,ASBL,
+forme_jur,ONG,ONG,
+org,arc-csu,ARC-CSU,
+org,ips,IPS,
+org,independant,Indépendant,
+org,Autre,Autre,
+,,,
+oui_non,oui,Oui,
+oui_non,non,Non,
+,,,
+remarque,1,Oui,
+remarque,0,Non,
+,,,
+remarque_na,1,Oui,
+remarque_na,0,Non,
+remarque_na,na,Non_Applicable,
+,,,
+mineur,5,Oui,
+mineur,0,Non,
+,,,
+mineur_na,5,Oui,
+mineur_na,0,Non,
+mineur_na,na,Non_Applicable,
+,,,
+majeur,10,Oui,
+majeur,0,Non,
+,,,
+majeur_na,10,Oui,
+majeur_na,0,Non,
+majeur_na,na ,Non_Applicable,
+,,,
+critique,15,Oui,
+critique,0,Non,
+,,,
+critique_na,15,Oui,
+critique_na,0,Non,
+critique_na,na ,Non_Applicable,
+,,,
+role,Superviseur_Nat,Superviseur national,
+role,Superviseur_Prov,Superviseur provincial,
+role,Enqueteur,Enquêteur,
+ville,kalemie,Kalemie,dps24
+ville,kolwezi,Kolwezi,dps15
+ville,lubumbashi,Lubumbashi,dps3
+ville,likasi,Likasi,dps3
+ville,kin,Kinshasa,dps10
+ville,kikwit,kikwit,dps13
+ville,kasai,kasai,dps7
+ville,kasai_central,kasai_central,dps8
+ville,bandundu_ville,bandundu_ville,dps13
+ville,idiofa,idiofa,dps13
+,,,
+province,dps1,Bas-Uélé,
+province,dps2,Équateur,
+province,dps3,Haut-Katanga,
+province,dps4,Haut-Lomami,
+province,dps5,Haut-Uélé,
+province,dps6,Ituri,
+province,dps7,Kasaï,
+province,dps8,Kasaï-Central,
+province,dps9,Kasaï-Oriental,
+province,dps10,Kinshasa,
+province,dps11,Kongo-Central,
+province,dps12,Kwango,
+province,dps13,Kwilu,
+province,dps14,Lomami,
+province,dps15,Lualaba,
+province,dps16,Mai-Ndombe,
+province,dps17,Maniema,
+province,dps18,Mongala,
+province,dps19,Nord-Kivu,
+province,dps20,Nord-Ubangi,
+province,dps21,Sankuru,
+province,dps22,Sud-Kivu,
+province,dps23,Sud-Ubangi,
+province,dps24,Tanganyika,
+province,dps25,Tshopo,
+province,dps26,Tshuapa,

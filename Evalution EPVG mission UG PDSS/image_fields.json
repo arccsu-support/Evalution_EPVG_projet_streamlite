@@ -1,0 +1,78 @@
+[
+  {
+    "name": "aa2",
+    "label": "photo de l'Autorisation d'Ouverture MSPHP"
+  },
+  {
+    "name": "ea2",
+    "label": "Image Bâtiments"
+  },
+  {
+    "name": "ea9",
+    "label": "image plafond"
+  },
+  {
+    "name": "ea13",
+    "label": "Image zone de quarantaine "
+  },
+  {
+    "name": "ea15",
+    "label": "Image Zone de rebuts"
+  },
+  {
+    "name": "img_quai",
+    "label": "Image : quai de déchargement"
+  },
+  {
+    "name": "img_cantine",
+    "label": "Image : Cantine ou cafétaria "
+  },
+  {
+    "name": "img_salle_admin",
+    "label": "Image : salle d'administration"
+  },
+  {
+    "name": "img_vestiaires",
+    "label": "Image : vestiaires"
+  },
+  {
+    "name": "img_installation",
+    "label": "Image instalations sanitaires "
+  },
+  {
+    "name": "ec7",
+    "label": "Image Locaux d'entreposage"
+  },
+  {
+    "name": "ec11",
+    "label": "Image étagères"
+  },
+  {
+    "name": "ec15",
+    "label": "Image stockages produits"
+  },
+  {
+    "name": "ec22",
+    "label": "Image Protection de locaux contre des oiseaux, de rongeurs, d’insectes et d’autres animaux"
+  },
+  {
+    "name": "ed4",
+    "label": "image thermomètre fonctionnel"
+  },
+  {
+    "name": "ed6",
+    "label": "Image ( thermomètre utilisé pour la surveillance a-t-il été étalonné)"
+  },
+  {
+    "name": "eg4",
+    "label": "Image (Chaque local d'entreposage  dispose-t-il d’un hygromètre fonctionnel)"
+  },
+  {
+    "name": "eg6",
+    "label": "image (Chaque local d'entreposage  dispose-t-il d’un thermomètre  fonctionnel)"
+  },
+  {
+    "name": "eh6",
+    "label": "image caméras de surveillance fonctionnelles dans les locaux ?"
+  }
+]
